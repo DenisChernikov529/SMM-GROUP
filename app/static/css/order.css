@@ -1,0 +1,13 @@
+.select2-results__option--highlighted,
+.select2-results__option:hover{
+background: #1f9614 !important;
+}
+[class^='select2'] {
+border-radius: 0px !important;
+border-color: #3c8dbc;
+box-shadow: none;
+}
+[class^='select2']::-webkit-scrollbar {
+width: 0px;
+}
+

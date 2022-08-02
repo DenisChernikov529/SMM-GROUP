@@ -1,0 +1,505 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <section class="services-sect">
+            <div class="container">
+                <h2 class="title2">Услуги и цены</h2>
+
+                <div class="services-items">
+                    <div class="services-items__img"><img src='{% static "img/spider4.jpg" %}' alt=""></div>
+                    <div class="service service-vk" data-targ="vk">
+                        <div class="service__name"><img src='{% static "img/vk.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="vk" id="sc">подписчики обычные</li>
+                            <li data-targ="vk" id="sl">подписчики живые</li>
+                            <li data-targ="vk" id="fp">друзья в профиль</li>
+                            <li data-targ="vk" id="ll">лайки живые</li>
+                            <li data-targ="vk" id="vl">просмотры живые (глазик)</li>
+                            <li data-targ="vk" id="re">репосты</li>
+                            <li data-targ="vk" id="op">опросы</li>
+                            <li data-targ="vk" id="vv">просмотры видео</li>
+                        </ul>
+                    </div>
+
+                    <div class="service service-instagram" data-targ="instagram">
+                        <div class="service__name"><img src='{% static "img/instagram.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="ig" id="sc">подписчики обычные</li>
+                            <li data-targ="ig" id="sl">подписчики живые</li>
+                            <li data-targ="ig" id="lc">лайки обычные</li>
+                            <li data-targ="ig" id="ll">лайки живые</li>
+                            <li data-targ="ig" id="al">автолайки</li>
+                            <li data-targ="ig" id="vv">просмотры видео ig tv</li>
+                            <li data-targ="ig" id="vh">просмотры историй (story)</li>
+                            <li data-targ="ig" id="s">сохранение</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="service service-facebook" data-targ="fb">
+                        <div class="service__name"><img src='{% static "img/facebook.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="fb" id="sl">Подписчики живые</li>
+                        </ul>
+                    </div>
+
+                    <div class="service service-telegram" data-targ="telegram">
+                        <div class="service__name"><img src='{% static "img/telegram.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="tg" id="sc">Подписчики на канал</li>
+                            <li data-targ="tg" id="v">Просмотры</li>
+                        </ul>
+                    </div>
+
+                    <div class="service service-tiktok" data-targ="tiktok">
+                        <div class="service__name"><img src='{% static "img/tiktok.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="tiktok" id="sl">Подписчики живые</li>
+                            <li data-targ="tiktok" id="ll">Лайки живые</li>
+                            <li data-targ="tiktok" id="vv">Просмотры видео</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="service service-twitch" data-targ="twitch">
+                        <div class="service__name"><img src='{% static "img/twitch.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="twitch" id="sc">Подписчики на канал</li>
+                            <li data-targ="twitch" id="vc">просмотры на канал</li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="service service-youtube" data-targ="youtube">
+                        <div class="service__name"><img src='{% static "img/youtube.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="youtube" id="sl">Подписчики живые</li>
+                            <li data-targ="youtube" id="ll">Лайки живые</li>
+                            <li data-targ="youtube" id="vl">Просмотры живые</li>
+                            <li data-targ="youtube" id="d">Дизлайки</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="service service-ok" data-targ="ok">
+                        <div class="service__name"><img src='{% static "img/ok.png" %}' alt=""></div>
+                        <ul class="service__list">
+                            <li data-targ="ok" id="sl">Подписчики живые</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+ <div class="wrap-modal wrap-modal-ask">
+        <div class="modal2">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+
+            <p class="modal2__title">
+                Задать вопрос
+            </p>
+            <div class="input-bl">
+                <p class="input-bl__title">UserName</p>
+                <div class="input-bl__field">
+                    <input type="text">
+                    <img src='{% static "img/user.png" %}' alt="">
+                </div>
+            </div>
+
+            <div class="input-bl">
+                <p class="input-bl__title">E mail</p>
+                <div class="input-bl__field">
+                    <input type="email">
+                    <img src='{% static "img/mail.png" %}' alt="">
+                </div>
+            </div>
+            <div class="input-bl">
+                <p class="input-bl__title">Ваш вопрос</p>
+                <div class="input-bl__field">
+                    <textarea></textarea>
+
+                </div>
+            </div>
+
+            <div class="forma__foot">
+                <button class="btn6 forma__btn">Отправить</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="fb">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Facebook</span>
+                <img src='{% static "img/fb2.png" %}' alt="">
+            </div>
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-facebook-2">
+                    <label for="input-serv-facebook-2" class="serv">подписчики живые</label>
+                </div>
+
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="youtube">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Youtube</span>
+                <img src='{% static "img/youtube2.png" %}' alt="">
+            </div>
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-youtube-2">
+                    <label for="input-serv-youtube-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-youtube-4">
+                    <label for="input-serv-youtube-4" class="serv">лайки живые</label>
+
+                    <input type="radio" name="serv" id="input-serv-youtube-6">
+                    <label for="input-serv-youtube-6" class="serv">просмотры живые</label>
+
+                    <input type="radio" name="serv" id="input-serv-youtube-8">
+                    <label for="input-serv-youtube-8" class="serv">дизлайки</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="instagram">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Instagram</span>
+                <img src='{% static "img/instagram2.png" %}' alt="">
+            </div>
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-inst-1">
+                    <label for="input-serv-inst-1" class="serv">подписчики обычные</label>
+                    <input type="radio" name="serv" id="input-serv-inst-2">
+                    <label for="input-serv-inst-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-inst-3">
+                    <label for="input-serv-inst-3" class="serv">лайки обычные</label>
+                    <input type="radio" name="serv" id="input-serv-inst-4">
+                    <label for="input-serv-inst-4" class="serv">лайки живые </label>
+                    <input type="radio" name="serv" id="input-serv-inst-5">
+                    <label for="input-serv-inst-5" class="serv"> автолайки </label>
+                    <input type="radio" name="serv" id="input-serv-inst-6">
+                    <label for="input-serv-inst-6" class="serv"> просмотры видео ig tv</label>
+                    <input type="radio" name="serv" id="input-serv-inst-7">
+                    <label for="input-serv-inst-7" class="serv">просмотры историй (story)</label>
+                    <input type="radio" name="serv" id="input-serv-inst-8">
+                    <label for="input-serv-inst-8" class="serv">сохранение</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="telegram">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Telegram</span>
+                <img src='{% static "img/tg2.png" %}' alt="">
+            </div>
+    
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-tg-1">
+                    <label for="input-serv-tg-1" class="serv">подписчики на канал</label>
+                    <input type="radio" name="serv" id="input-serv-tg-3">
+                    <label for="input-serv-tg-3" class="serv">просмотры</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src="img/icon.png" alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="twitch">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Twitch</span>
+                <img src='{% static "img/twitch2.png" %}' alt="">
+            </div>
+ 
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-twitch-1">
+                    <label for="input-serv-twitch-1" class="serv">подписчики на канал</label>
+                    <input type="radio" name="serv" id="input-serv-twitch-2">
+                    <label for="input-serv-twitch-2" class="serv">просмотры канала</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="tiktok">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Tiktok</span>
+                <img src='{% static "img/tiktok2.png"%}' alt="">
+            </div>
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-tiktok-2">
+                    <label for="input-serv-tiktok-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-tiktok-4">
+                    <label for="input-serv-tiktok-4" class="serv">лайки живые </label>
+                    <input type="radio" name="serv" id="input-serv-tiktok-6">
+                    <label for="input-serv-tiktok-6" class="serv"> просмотры видео</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="vk">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Вконтакте</span>
+                <img src='{% static "img/vk2.png" %}' alt="">
+            </div>
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-vk-1">
+                    <label for="input-serv-vk-1" class="serv">подписчики обычные</label>
+                    <input type="radio" name="serv" id="input-serv-vk-2">
+                    <label for="input-serv-vk-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-vk-3">
+                    <label for="input-serv-vk-3" class="serv">друзья в профиль</label>
+                    <input type="radio" name="serv" id="input-serv-vk-4">
+                    <label for="input-serv-vk-4" class="serv">лайки живые </label>
+                    <input type="radio" name="serv" id="input-serv-vk-5">
+                    <label for="input-serv-vk-5" class="serv">просмотры живые (глазик)</label>
+                    <input type="radio" name="serv" id="input-serv-vk-6">
+                    <label for="input-serv-vk-6" class="serv">репосты</label>
+                    <input type="radio" name="serv" id="input-serv-vk-7">
+                    <label for="input-serv-vk-7" class="serv">опросы</label>
+                    <input type="radio" name="serv" id="input-serv-vk-8">
+                    <label for="input-serv-vk-8" class="serv">просмотры видео</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="ok">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Одноклассники</span>
+                <img src='{% static "img/ok2.png" %}' alt="">
+            </div>
+
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-ok-2">
+                    <label for="input-serv-ok-2" class="serv">подписчики живые</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src="img/icon.png" alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                   
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+        <p id='fapzh' style='display: none;'>{{fapzh}}</p>
+    <p id='yopzh' style='display: none;'>{{yopzh}}</p>
+    <p id='yolzh' style='display: none;'>{{yolzh}}</p>
+    <p id='yoprzh' style='display: none;'>{{yoprzh}}</p>
+    <p id='yodz' style='display: none;'>{{yodz}}</p>
+    <p id='inspob' style='display: none;'>{{inspob}}</p>
+    <p id='inspzh' style='display: none;'>{{inspzh}}</p>
+    <p id='inslob' style='display: none;'>{{inslob}}</p>
+    <p id='inslzh' style='display: none;'>{{inslzh}}</p>
+    <p id='insaul' style='display: none;'>{{insaul}}</p>
+    <p id='insprvi' style='display: none;'>{{insprvi}}</p>
+    <p id='inspris' style='display: none;'>{{inspris}}</p>
+    <p id='inssohr' style='display: none;'>{{inssohr}}</p>
+    <p id='tepnk' style='display: none;'>{{tepnk}}</p>
+    <p id='tepvgich' style='display: none;'>{{tepvgich}}</p>
+    <p id='tepr' style='display: none;'>{{tepr}}</p>
+    <p id='twpnk' style='display: none;'>{{twpnk}}</p>
+    <p id='twprk' style='display: none;'>{{twprk}}</p>
+    <p id='tipzh' style='display: none;'>{{tipzh}}</p>
+    <p id='tilzh' style='display: none;'>{{tilzh}}</p>
+    <p id='tiprvi' style='display: none;'>{{tiprvi}}</p>
+    <p id='vkpob' style='display: none;'>{{vkpob}}</p>
+    <p id='vkpzh' style='display: none;'>{{vkpzh}}</p>
+    <p id='vkdrvpr' style='display: none;'>{{vkdrvpr}}</p>
+    <p id='vklzh' style='display: none;'>{{vklzh}}</p>
+    <p id='vkprzh' style='display: none;'>{{vkprzh}}</p>
+    <p id='vkre' style='display: none;'>{{vkre}}</p>
+    <p id='vkop' style='display: none;'>{{vkop}}</p>
+    <p id='vkprvi' style='display: none;'>{{vkprvi}}</p>
+    <p id='odpzh' style='display: none;'>{{odpzh}}</p> 
+{% endblock %}

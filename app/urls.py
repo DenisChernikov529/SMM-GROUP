@@ -1,0 +1,23 @@
+from django.urls import path, include
+from .views import *
+
+urlpatterns = [
+    path('', IndexView.as_view(), name='index'),
+    path('balance', BalanceView.as_view(), name='balance'),
+    path('cabinet/', CabinetView.as_view(), name='cabinet'),
+    path('order', OrderView.as_view(), name='order'),
+    path('services', ServicesView.as_view(), name='services'),
+    path('forgotPass', ForgotPassView.as_view(), name='forgotPass'),
+    path('news', NewsView.as_view(), name='news'),
+    path('friend', FriendView.as_view(), name='friend'),
+    path('accounts/login/', LoginView.as_view(), name="login"),
+    path('accounts/signup/', SignUpView.as_view(), name="signup"),
+    path('soc/', include('social_django.urls', namespace='social')),
+    path('ref/<str:token>/', RefSignUpView.as_view(), name='ref'),
+    path('seckey/<str:key>/', SecretKeyView.as_view(), name='seckey'),
+    path('neworder', NewOrderView.as_view(), name='neworder'),
+    path('prices', PricesView.as_view(), name='prices'),
+    path('newworder/<str:n>', NewwOrderView.as_view(), name='newworder'),
+    path('deleteorder/<str:n>', DeleteBasket.as_view(), name='deletebasket'),
+    path('yandex/pay', YandexPayView.as_view(), name='yanview'),
+]

@@ -1,0 +1,802 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block content %}
+        <div class="one-sect">
+            <div class="container">
+                <div class="one-sect__col1">
+                    <h1 class="title1">Безумное продвижение в соцсетях</h1>
+                    <div class="slogan">
+                        <div class="slogan__row1">Накрутим всё</div>
+                        <div class="slogan__row2">Лайки, подписчиков, репосты, группы</div>
+                    </div>
+                    <div class="wrapp1">
+                        <div class="wrapp1__col1">
+                            {% if request.user.is_authenticated %}
+                            <a href="/order" class="btn3">Начать раскрутку</a>
+                            {% else %}
+                            <a href="/accounts/login" class="btn3">Начать раскрутку</a>
+                            {% endif %}
+                        </div>
+                        <div class="wrapp1__col2">
+                            <p><strong>Результаты</strong> уже в <strong>первые 24 часа</strong>
+                                после начала работы</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="one-sect__col2">
+                    <div class="one-sect__img4"><img src='{% static "img/instagram-bg.png" %}' alt=""></div>
+                    <div class="one-sect__img1"><img src='{% static "img/spider.png" %}' alt=""></div>
+                    <div class="one-sect__img2"><img src='{% static "img/button-play.png" %}' alt=""></div>
+                    <div class="one-sect__img3"><img src='{% static "img/count-likes.png" %}' alt=""></div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="title2">Мы раскручиваем</h2>
+
+            <div class="services-items">
+                <div class="service service-facebook">
+                    <div class="service__name"><img src='{% static "img/facebook.png" %}' alt=""></div>
+                    <div class="service__desc">Накрутка лайков и <br>
+                        друзей, раскрутка групп</div>
+                    <a data-targ="fb" class="service__more">Узнать больше</a>
+                </div>
+
+                <div class="service service-youtube">
+                    <div class="service__name"><img src='{% static "img/youtube.png" %}' alt=""></div>
+                    <div class="service__desc">Накрутка просмотров,
+                        лайков и подписчиков</div>
+                    <a data-targ="youtube" class="service__more">Узнать больше</a>
+                </div>
+
+                <div class="service service-instagram">
+                    <div class="service__name"><img src='{% static "img/instagram.png" %}' alt=""></div>
+                    <div class="service__desc">Накрутка лайков и
+                        подписчиков</div>
+                    <a data-targ="instagram" class="service__more">Узнать больше</a>
+                </div>
+
+                <div class="service service-telegram">
+                    <div class="service__name"><img src='{% static "img/telegram.png" %}' alt=""></div>
+                    <div class="service__desc">Накрутка подписчиков</div>
+                    <a data-targ="telegram" class="service__more">Узнать больше</a>
+                </div>
+
+                <div class="service service-twitch">
+                    <div class="service__name"><img src='{% static "img/twitch.png" %}' alt=""></div>
+                    <div class="service__desc">Подписчики и просмотры <br>
+                        на канал</div>
+                    <a data-targ="twitch" class="service__more">Узнать больше</a>
+                </div>
+
+                <div class="service service-tiktok">
+                    <div class="service__name"><img src='{% static "img/tiktok.png" %}' alt=""></div>
+                    <div class="service__desc">Накрутка лайков <br>
+                        и подписчиков</div>
+                    <a data-targ="tiktok" class="service__more">Узнать больше</a>
+                </div>
+
+                <div class="service service-vk">
+                    <div class="service__name"><img src='{% static "img/vk.png" %}' alt=""></div>
+                    <div class="service__desc">Накрутка лайков и <br>
+                        друзей, раскрутка групп</div>
+                    <a data-targ="vk" class="service__more">Узнать больше</a>
+                </div>
+
+                <div class="service service-ok">
+                    <div class="service__name"><img src='{% static "img/ok.png" %}' alt=""></div>
+                    <div class="service__desc">Накрутка лайков и <br>
+                        друзей, раскрутка групп</div>
+                    <a data-targ="ok" class="service__more">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1">
+        <h2 class="title2">Выведем ваш бизнес на новый уровень</h2>
+
+        <div class="container">
+            <div class="res-items">
+                <div class="it-res">
+                    <div class="it-res__icon"><img src='{% static "img/customers.png" %}' alt=""></div>
+                    <h3 class="it-res__title">Увеличение клиентов</h3>
+                    <div class="it-res__desc">Миллионы подписчиков и
+                        десятки тысяч клиентов для
+                        вашего бизнеса</div>
+                </div>
+
+                <div class="it-res">
+                    <div class="it-res__icon"><img src='{% static "img/activity.png" %}' alt=""></div>
+                    <h3 class="it-res__title">Повышение активности</h3>
+                    <div class="it-res__desc">Огромное количество лайков
+                        и репостов на записях в ваших
+                        аккаунтах и сообществах</div>
+                </div>
+
+                <div class="it-res">
+                    <div class="it-res__icon"><img src='{% static "img/effect.png" %}' alt=""></div>
+                    <h3 class="it-res__title">Вирусный эффект</h3>
+                    <div class="it-res__desc">Мощный вирусный эффект
+                        посредтвом репостов ваших
+                        записей</div>
+                </div>
+
+                <div class="it-res">
+                    <div class="it-res__icon"><img src='{% static "img/trust.png" %}' alt=""></div>
+                    <h3 class="it-res__title">Повышение доверия</h3>
+                    <div class="it-res__desc">Люди доверяют группам с
+                        большим количеством
+                        подписчиков и активности</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="promotion">
+        <div class="container">
+            <div class="promotion__co1">
+                <img src='{% static "img/promo.png" %}' alt="">
+            </div>
+            <div class="promotion__co2">
+                <img src='{% static "img/spider2.png" %}' alt="">
+            </div>
+        </div>
+    </div>
+
+    <section class="advantages">
+        <div class="container">
+            <h2 class="title2">Преимущества SMM Group</h2>
+
+            <div class="advant-box">
+                <div class="advant-box__img"><img src='{% static "img/img2.jpg" %}' alt=""></div>
+                <div class="advant">
+                    <p class="advant__num">01</p>
+                    <p class="advant__title">Оплата</p>
+                    <div class="advant__desc">У нас более 10 видов оплаты, начиная QIWI <br>
+                        и заканчивая банковской картой.</div>
+                </div>
+
+                <div class="advant">
+                    <p class="advant__num">02</p>
+                    <p class="advant__title">Всегда на связи</p>
+                    <div class="advant__desc">Наша команда всегда поможет Вам. Наш чат и <br>
+                        техподдрежка работает 24/7.</div>
+                </div>
+
+                <div class="advant">
+                    <p class="advant__num">03</p>
+                    <p class="advant__title">Получите скидку</p>
+                    <div class="advant__desc">Чем больший объем, тем больше скидка. <br>
+                        Покупай много и с выгодой. А купленный объем <br>
+                        распределяй в личном кабинете <br>
+                        на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="advant">
+                    <p class="advant__num">04</p>
+                    <p class="advant__title">Компенсации</p>
+                    <div class="advant__desc">Автоматическая бесплатная компенсация <br>
+                        отписавшихся пользователей не ограниченное <br>
+                        количество раз.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="container">
+            <div class="section2__col1">
+                <img src='{% static "img/img3.png" %}' alt="">
+            </div>
+            <div class="section2__col2">
+                <div class="trump-call">
+                    <h2 class="trump-call__title">Выделяйся среди друзей!</h2>
+                    <p class="trump-call__row1">Стань популярным прямо сейчас</p>
+                    <p class="trump-call__row2">Выгляди успешно <strong>с большим</strong> числом лайков, репостов <br>
+                        и подписчиков.</p>
+                    <div class="trump-call__buttons">
+                        <a href="/accounts/signup" class="btn3 btn3_1">Зарегистрироваться </a>
+                            {% if request.user.is_authenticated %}
+                            <a href="/order" class="btn4">Начать раскрутку</a>
+                            {% else %}
+                            <a href="/accounts/login" class="btn4">Начать раскрутку</a>
+                            {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sect-reviews">
+        <div class="container">
+            <div class="sect-reviews__top-panel">
+                <h2 class="title2">Отзывы о нас</h2>
+
+                <div class="reviews__cntr">
+                    <button class="reviews__arrow reviews__prev">
+                        <img src='{% static "img/arrow.png" %}' alt="">
+                    </button>
+                    <div class="reviews__dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <button class="reviews__arrow reviews__next">
+                        <img src='{% static "img/arrow.png" %}' alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="reviews">
+
+                <div class="review">
+                    <div class="review__avatar">
+                        <img src='{% static "img/avatar/ava1.png" %}' alt=""></div>
+                    <div class="review__name">Дарья Котова</div>
+                    <div class="review__content">Не первый раз пользуюсь
+                        услугами компании SMM GROUP.
+                        Огромное количество лайков
+                        и репостов на записях в ваших
+                        аккаунтах и сообществах как
+                        всегда всё на высшем уровне.
+                        Я осталась очень довольна</div>
+                </div>
+
+                <div class="review">
+                    <div class="review__avatar"><img src='{% static "img/avatar/ava2.png" %}' alt=""></div>
+                    <div class="review__name">Уэйн Брюс</div>
+                    <div class="review__content">Хочу сказать большое спасибо
+                        админам за такое большое
+                        количество живых подписчиков.
+                        Заказывал для паблика подписки
+                        для повышения рейтинга, а на
+                        самом деле пополнил клиентуру!
+                        Огромное спамибо</div>
+                </div>
+
+                <div class="review">
+                    <div class="review__avatar"><img src='{% static "img/avatar/ava3.png" %}' alt=""></div>
+                    <div class="review__name">Алекс Кривиков</div>
+                    <div class="review__content">Мощный вирусный эффект
+                        посредтвом репостов ваших
+                        записей. Люди доверяют группам
+                        сбольшим количеством
+                        подписчиков и активности.
+                        Огромное количество лайков
+                        и репостов на записях в ваших
+                        аккаунтах и сообществах. </div>
+                </div>
+
+                <div class="review">
+                    <div class="review__avatar"><img src='{% static "img/avatar/ava4.png" %}' alt=""></div>
+                    <div class="review__name">Наталья Калинина</div>
+                    <div class="review__content">Не первый раз пользуюсь
+                        услугами компании SMM GROUP.
+                        Огромное количество лайков
+                        и репостов на записях в ваших
+                        аккаунтах и сообществах как
+                        всегда всё на высшем уровне.
+                        Админам огромное спасибо за
+                        проделанную работу. </div>
+                </div>
+
+                <div class="review">
+                    <div class="review__avatar"><img src='{% static "img/avatar/ava4.png" %}' alt=""></div>
+                    <div class="review__name">Наталья Калинина</div>
+                    <div class="review__content">Не первый раз пользуюсь
+                        услугами компании SMM GROUP.
+                        Огромное количество лайков
+                        и репостов на записях в ваших
+                        аккаунтах и сообществах как
+                        всегда всё на высшем уровне.
+                        Админам огромное спасибо за
+                        проделанную работу. </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sect-faq" id="sect-faq">
+        <div class="container">
+            <h2 class="title2">Ответы на частые вопросы</h2>
+            <div class="faq">
+                {% for i in questions %}
+
+                <div class="quest">
+                    <div class="quest__head">
+                        <p class="quest__question">{{i.question}}</p>
+
+                    </div>
+                    <div class="quest__answer">{{i.answer}}</div>
+                </div>
+            {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <section class="sect-news">
+        <div class="container">
+            <h2 class="title2">Актуальные новости</h2>
+             <div class="news-items">
+   <!--             <div class="news-box">
+                    <h3 class="news-box__title">БОНУСЫ ДЛЯ ПОСТОЯННЫХ
+                        клиентов</h3>
+                    <div class="news-box__date-wrap">
+                        <div class="news-box__date">1 Марта 2020 @ 10:59 AM</div>
+                    </div>
+                    <div class="news-box__desc">SMM GROUP is a new cryptocurrency designed to resolve the most pressing challenges faced.</div>
+                    <a href="/news" class="news-box__read">Читать новость</a>
+                </div>
+            </div> -->
+            {% for i in news%}
+            
+                <div class="news-box">
+                    <h3 class="news-box__title">{{ i.action }}</h3>
+                    <div class="news-box__date-wrap">
+                        <div class="news-box__date">{{ i.data }}</div>
+                    </div>
+                    <div class="news-box__desc">{{ i.text }}</div>
+                    <a href="/news" class="news-box__read">Читать новость</a>
+                </div>
+            
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <div class="help-sect">
+        <div class="container">
+            <div class="help-sect__col1">
+                <div class="help">
+                    <p class="help__title">Возникли вопросы <br> или проблемы с заказом?</p>
+                    <p class="help__row1">напиши нашим специалистам </p>
+                    <p class="help__row2"><strong>Telegram</strong> поддержка 24/7 <a href="tg://resolve?domain=smm_groupru"><img src="img/tg.png" alt=""> @smm_groupru</a>
+                    </p>
+                    <div>
+                        <a class="btn3 btn-ask">Задать вопрос</a>
+                    </div>
+                </div>
+            </div>
+            <div class="help-sect__col2">
+                <div>
+                    {% if request.user.is_authenticated %}
+                    <a class="btn4 help-sect__begin-btn" href="/order">Начать раскрутку</a>
+                    {% else %}
+                    <a class="btn4 help-sect__begin-btn" href="/accounts/login">Начать раскрутку</a>
+                    {% endif %}
+                </div>
+
+                <img class="help-sect__col2-img" src='{% static "img/spider3.png" %}' alt="">
+            </div>
+        </div>
+    </div>
+ <div class="wrap-modal wrap-modal-ask">
+        <div class="modal2">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+
+            <p class="modal2__title">
+                Задать вопрос
+            </p>
+            <form action="/" method="POST">
+            {% csrf_token %}
+            <div class="input-bl">
+                <p class="input-bl__title">UserName</p>
+                <div class="input-bl__field">
+                    <input name="UserName" type="text">
+                    <img src='{% static "img/user.png" %}' alt="">
+                </div>
+            </div>
+
+            <div class="input-bl">
+                <p class="input-bl__title">E mail</p>
+                <div class="input-bl__field">
+                    <input name="email" type="email">
+                    <img src='{% static "img/mail.png" %}' alt="">
+                </div>
+            </div>
+            <div class="input-bl">
+                <p class="input-bl__title">Ваш вопрос</p>
+                <div class="input-bl__field">
+                    <textarea name="message"></textarea>
+
+                </div>
+            </div>
+
+            <div class="forma__foot">
+                <button class="btn6 forma__btn">Отправить</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="fb">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Facebook</span>
+                <img src='{% static "img/fb2.png" %}' alt="">
+            </div>
+            
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-facebook-2">
+                    <label for="input-serv-facebook-2" class="serv">подписчики живые</label>
+                </div>
+
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="youtube">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Youtube</span>
+                <img src='{% static "img/youtube2.png" %}' alt="">
+            </div>
+            
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-youtube-2">
+                    <label for="input-serv-youtube-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-youtube-4">
+                    <label for="input-serv-youtube-4" class="serv">лайки живые</label>
+
+                    <input type="radio" name="serv" id="input-serv-youtube-6">
+                    <label for="input-serv-youtube-6" class="serv">просмотры живые</label>
+
+                    <input type="radio" name="serv" id="input-serv-youtube-8">
+                    <label for="input-serv-youtube-8" class="serv">дизлайки</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="instagram">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Instagram</span>
+                <img src='{% static "img/instagram2.png" %}' alt="">
+            </div>
+            
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-inst-1">
+                    <label for="input-serv-inst-1" class="serv">подписчики обычные</label>
+                    <input type="radio" name="serv" id="input-serv-inst-2">
+                    <label for="input-serv-inst-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-inst-3">
+                    <label for="input-serv-inst-3" class="serv">лайки обычные</label>
+                    <input type="radio" name="serv" id="input-serv-inst-4">
+                    <label for="input-serv-inst-4" class="serv">лайки живые </label>
+                    <input type="radio" name="serv" id="input-serv-inst-5">
+                    <label for="input-serv-inst-5" class="serv"> автолайки </label>
+                    <input type="radio" name="serv" id="input-serv-inst-6">
+                    <label for="input-serv-inst-6" class="serv"> просмотры видео ig tv</label>
+                    <input type="radio" name="serv" id="input-serv-inst-7">
+                    <label for="input-serv-inst-7" class="serv">просмотры историй (story)</label>
+                    <input type="radio" name="serv" id="input-serv-inst-8">
+                    <label for="input-serv-inst-8" class="serv">сохранение</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="telegram">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Telegram</span>
+                <img src='{% static "img/tg2.png" %}' alt="">
+            </div>
+
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-tg-1">
+                    <label for="input-serv-tg-1" class="serv">подписчики на канал</label>
+                    <input type="radio" name="serv" id="input-serv-tg-3">
+                    <label for="input-serv-tg-3" class="serv">просмотры</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="twitch">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Twitch</span>
+                <img src='{% static "img/twitch2.png" %}' alt="">
+            </div>
+        
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-twitch-1">
+                    <label for="input-serv-twitch-1" class="serv">подписчики на канал</label>
+                    <input type="radio" name="serv" id="input-serv-twitch-2">
+                    <label for="input-serv-twitch-2" class="serv">просмотры канала</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="tiktok">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Tiktok</span>
+                <img src="img/tiktok2.png" alt="">
+            </div>
+      
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-tiktok-2">
+                    <label for="input-serv-tiktok-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-tiktok-4">
+                    <label for="input-serv-tiktok-4" class="serv">лайки живые </label>
+                    <input type="radio" name="serv" id="input-serv-tiktok-6">
+                    <label for="input-serv-tiktok-6" class="serv"> просмотры видео</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrap-modal" data-name="vk">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Вконтакте</span>
+                <img src='{% static "img/vk2.png" %}' alt="">
+            </div>
+           
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-vk-1">
+                    <label for="input-serv-vk-1" class="serv">подписчики обычные</label>
+                    <input type="radio" name="serv" id="input-serv-vk-2">
+                    <label for="input-serv-vk-2" class="serv">подписчики живые</label>
+                    <input type="radio" name="serv" id="input-serv-vk-3">
+                    <label for="input-serv-vk-3" class="serv">друзья в профиль</label>
+                    <input type="radio" name="serv" id="input-serv-vk-4">
+                    <label for="input-serv-vk-4" class="serv">лайки живые </label>
+                    <input type="radio" name="serv" id="input-serv-vk-5">
+                    <label for="input-serv-vk-5" class="serv">просмотры живые (глазик)</label>
+                    <input type="radio" name="serv" id="input-serv-vk-6">
+                    <label for="input-serv-vk-6" class="serv">репосты</label>
+                    <input type="radio" name="serv" id="input-serv-vk-7">
+                    <label for="input-serv-vk-7" class="serv">опросы</label>
+                    <input type="radio" name="serv" id="input-serv-vk-8">
+                    <label for="input-serv-vk-8" class="serv">просмотры видео</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                   
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap-modal" data-name="ok">
+        <div class="modal">
+            <button class="modal__close">
+                <img src='{% static "img/close.png" %}' alt="">
+            </button>
+            <div class="modal__title">
+                <span> Раскрутка Одноклассники</span>
+                <img src='{% static "img/ok2.png" %}' alt="">
+            </div>
+       
+
+            <div class="modal__body">
+                <div class="serv-list">
+                    <input type="radio" name="serv" id="input-serv-ok-2">
+                    <label for="input-serv-ok-2" class="serv">подписчики живые</label>
+                </div>
+
+                <div class="mess">
+                    <div class="mess__icon"><img src="img/icon.png" alt="">
+
+                    </div>
+                    <div class="mess__txt">Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                        в личном кабинете на неограниченное количество заказов.</div>
+                </div>
+
+                <div class="serv-box-items">
+                    
+                </div>
+
+                <div class="advant-list">
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <p id='fapzh' style='display: none;'>{{fapzh}}</p>
+    <p id='yopzh' style='display: none;'>{{yopzh}}</p>
+    <p id='yolzh' style='display: none;'>{{yolzh}}</p>
+    <p id='yoprzh' style='display: none;'>{{yoprzh}}</p>
+    <p id='yodz' style='display: none;'>{{yodz}}</p>
+    <p id='inspob' style='display: none;'>{{inspob}}</p>
+    <p id='inspzh' style='display: none;'>{{inspzh}}</p>
+    <p id='inslob' style='display: none;'>{{inslob}}</p>
+    <p id='inslzh' style='display: none;'>{{inslzh}}</p>
+    <p id='insaul' style='display: none;'>{{insaul}}</p>
+    <p id='insprvi' style='display: none;'>{{insprvi}}</p>
+    <p id='inspris' style='display: none;'>{{inspris}}</p>
+    <p id='inssohr' style='display: none;'>{{inssohr}}</p>
+    <p id='tepnk' style='display: none;'>{{tepnk}}</p>
+    <p id='tepvgich' style='display: none;'>{{tepvgich}}</p>
+    <p id='tepr' style='display: none;'>{{tepr}}</p>
+    <p id='twpnk' style='display: none;'>{{twpnk}}</p>
+    <p id='twprk' style='display: none;'>{{twprk}}</p>
+    <p id='tipzh' style='display: none;'>{{tipzh}}</p>
+    <p id='tilzh' style='display: none;'>{{tilzh}}</p>
+    <p id='tiprvi' style='display: none;'>{{tiprvi}}</p>
+    <p id='vkpob' style='display: none;'>{{vkpob}}</p>
+    <p id='vkpzh' style='display: none;'>{{vkpzh}}</p>
+    <p id='vkdrvpr' style='display: none;'>{{vkdrvpr}}</p>
+    <p id='vklzh' style='display: none;'>{{vklzh}}</p>
+    <p id='vkprzh' style='display: none;'>{{vkprzh}}</p>
+    <p id='vkre' style='display: none;'>{{vkre}}</p>
+    <p id='vkop' style='display: none;'>{{vkop}}</p>
+    <p id='vkprvi' style='display: none;'>{{vkprvi}}</p>
+    <p id='odpzh' style='display: none;'>{{odpzh}}</p> 
+{% endblock %}
+
+
+
+
+
