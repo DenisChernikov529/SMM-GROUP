@@ -11,6 +11,5 @@ class NewsAdmin(admin.ModelAdmin):
 
 admin.site.register(PricesForServices)
 admin.site.register(OrderModel)
-admin.site.register(Profile)
 admin.site.register(Message)
 admin.site.register(Service)
