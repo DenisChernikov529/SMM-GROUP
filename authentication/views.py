@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as auth_login
 from django.http import HttpResponseRedirect
-from django.shortcuts import redirect
+from django.urls import reverse
 
 # locale imports
 from .forms import SignUpForm, EmailForm
@@ -80,7 +80,7 @@ class ForgotPassView(TemplateView):
                 except Exception:
                     user = []
                 if bool(user):
-                    secret_key = randomlink(8)
+                    secret_key = common.randomlink(8)
                     user.secret_key = secret_key
                     user.save()
                     rev = request.build_absolute_uri(
@@ -89,7 +89,7 @@ class ForgotPassView(TemplateView):
                             kwargs={"key": secret_key},
                         )
                     )
-                    sendmessage(rev, email)
+                    common.sendmessage(rev, email)
                     return redirect("login")
                 else:
                     form = EmailForm()
