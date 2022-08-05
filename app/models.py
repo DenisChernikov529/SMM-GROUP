@@ -1,34 +1,10 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
+
+# locale imports
+from authentication.models import Profile
 
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    email = models.EmailField(help_text='Это поле обязательно')
-    balance = models.FloatField(default=0)
-    ref_link = models.CharField(max_length=8)
-    ref = models.ForeignKey(
-        'self',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-    )
-    secret_key = models.CharField(max_length=8, blank=True, null=True)
-
-    def __str__(self):
-        return self.user.username
-
-
-@receiver(post_save, sender=User)
-def new_user(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
-        instance.profile.save()
-
-
-class News(models.Model):
+class NewsModel(models.Model):
     action = models.CharField(max_length=200)
     text = models.TextField()
     data = models.DateField(auto_now=True)
@@ -42,7 +18,7 @@ class News(models.Model):
         ordering = ['data']
 
 
-class Orders(models.Model):
+class OrderModel(models.Model):
     number = models.IntegerField(null=True, blank=True)
     num_serv = models.IntegerField(null=True, blank=True)
     data = models.DateTimeField(null=True, blank=True)
@@ -78,7 +54,11 @@ SOC_NETWORKS = [
 class PricesForServices(models.Model):
     service_id = models.IntegerField()
 
-    social_network = models.CharField(max_length=2, choices=SOC_NETWORKS)
+    social_network = models.CharField(
+        max_length=2,
+        choices=SOC_NETWORKS,
+    )
+
     NAME_SERVS = [
         ('na', 'Накрутка живых подписчиков'),
         ('la', 'Лайки'),
@@ -104,7 +84,10 @@ class Message(models.Model):
 class Service(models.Model):
     name = models.CharField(max_length=2000)
     price = models.FloatField()
-    social_network = models.CharField(max_length=2, choices=SOC_NETWORKS)
+    social_network = models.CharField(
+        max_length=2,
+        choices=SOC_NETWORKS,
+    )
 
     class Meta:
         ordering = ['social_network']

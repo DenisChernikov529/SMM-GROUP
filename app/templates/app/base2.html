@@ -52,7 +52,7 @@
                 <button type="button" class="mob-menu-btn"><img src='{% static "img/burger.png" %}' alt=""></button>
                 {% else %}
                 <div class="header-top__account">
-                    <a href="/accounts/login/" class="bnt1">
+                    <a href="{% url 'login' %}" class="bnt1">
                         <img src= '{% static "img/log.png" %}' alt="">
                         <span>Вход</span>
                     </a>
