@@ -23,4 +23,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("app.urls")),
     path("account/", include("authentication.urls")),
+    path("balance/", include("balance.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

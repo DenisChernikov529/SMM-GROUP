@@ -19,7 +19,10 @@ class NewsModel(models.Model):
 
 
 class OrderModel(models.Model):
-    number = models.IntegerField(null=True, blank=True)
+    number = models.IntegerField(
+        null=True,
+        blank=True,
+    )
     num_serv = models.IntegerField(null=True, blank=True)
     data = models.DateTimeField(null=True, blank=True)
     social_network = models.CharField(max_length=200)

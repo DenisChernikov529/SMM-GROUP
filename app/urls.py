@@ -3,7 +3,6 @@ from .views import *
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
-    path('balance', BalanceView.as_view(), name='balance'),
     path('cabinet/', CabinetView.as_view(), name='cabinet'),
     path('order', OrderView.as_view(), name='order'),
     path('services', ServicesView.as_view(), name='services'),
@@ -16,5 +15,4 @@ urlpatterns = [
     path('prices', PricesView.as_view(), name='prices'),
     path('newworder/<str:n>', NewwOrderView.as_view(), name='newworder'),
     path('deleteorder/<str:n>', DeleteBasket.as_view(), name='deletebasket'),
-    path('yandex/pay', YandexPayView.as_view(), name='yanview'),
 ]

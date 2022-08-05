@@ -36,13 +36,3 @@ class ResetPasswordForm(forms.Form):
 
     class Meta:
         fields = ("password1", "password2")
-
-
-class BalanceForm(forms.Form):
-    balance = forms.CharField(
-        max_length=6,
-        widget=forms.TextInput(attrs={"type": "number"}),
-    )
-
-    class Meta:
-        fields = ("balance",)
