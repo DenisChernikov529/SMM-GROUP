@@ -23,3 +23,19 @@ class EmailForm(forms.Form):
 
     class Meta:
         fields = ("email",)
+
+
+class ResetPasswordForm(forms.Form):
+    password1 = forms.CharField(
+        label="New password",
+        max_length=100,
+        widget=forms.PasswordInput,
+    )
+    password2 = forms.CharField(
+        label="Again new password",
+        max_length=100,
+        widget=forms.PasswordInput,
+    )
+
+    class Meta:
+        fields = ("password1", "password2")

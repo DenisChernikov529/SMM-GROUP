@@ -24,4 +24,5 @@ urlpatterns = [
     path("", include("app.urls")),
     path("account/", include("authentication.urls")),
     path("balance/", include("balance.urls")),
+    path("news/", include("news.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

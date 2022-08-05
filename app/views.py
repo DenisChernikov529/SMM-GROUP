@@ -1,10 +1,6 @@
 import datetime
 
-from django.core.paginator import EmptyPage
-from django.core.paginator import PageNotAnInteger
-from django.core.paginator import Paginator
 from django.http import HttpResponse
-from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
@@ -12,43 +8,13 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 
 # locale imports
-from .apibigsmm import *
-from .forms import *
-from .models import *
-from .services import *
+from .forms import ContactForm
+from .forms import OrdersForm
+from .models import OrderModel
+from .models import Service
 
-
-class RefSignUpView(TemplateView):
-    template_name = "app/signup.html"
-
-    def dispatch(self, request, token, *args, **kwargs):
-
-        if request.method == "POST":
-            form = SignUpForm(request.POST)
-            if form.is_valid():
-                user = form.save()
-                user.profile.email = form.cleaned_data.get("email")
-                user.profile.balance = 0
-                user.profile.wholesale_balance = 0
-                link = randomlink(8)
-                user.profile.ref_link = link
-                prof = Profile.objects.get(ref_link=token)
-                user.profile.ref = prof
-                user.profile.save()
-                username = form.cleaned_data.get("username")
-                my_password = form.cleaned_data.get("password1")
-                user = authenticate(username=username, password=my_password)
-                auth_login(request, user)
-                return HttpResponseRedirect("/")
-            else:
-                return redirect("news")
-        else:
-            form = SignUpForm()
-            return render(
-                request,
-                self.template_name,
-                {"form": form, "request": request},
-            )
+from services.bigsmm import new_order
+from services.mail import sendmessage0
 
 
 class IndexView(TemplateView):
@@ -247,35 +213,36 @@ class IndexView(TemplateView):
             return render(request, self.template_name, context)
 
 
-class SecretKeyView(TemplateView):
-    template_name = "app/changepass.html"
+class NewwOrderView(TemplateView):
+    def dispatch(self, request, n, *args, **kwargs):
+        if request.method == "GET":
 
-    def dispatch(self, request, key, *args, **kwargs):
-        if request.method == "POST":
-            form = ResetPasswordForm(request.POST)
-            if form.is_valid():
-                user = Profile.objects.get(secret_key=key)
-                user.secret_key = ""
-
-                new_pass = form.cleaned_data.get("password1")
-
-                user.user.set_password(new_pass)
-                user.user.save()
-                user.save()
-                return redirect("login")
-            else:
-                return HttpResponse("lol")
-        else:
-            try:
-                user = Profile.objects.get(secret_key=key)
-            except Exception:
+            if not request.user.is_authenticated:
                 return HttpResponse("403 Forbidden")
-            form = ResetPasswordForm()
-            return render(
-                request,
-                self.template_name,
-                {"form": form},
-            )
+            try:
+                n = int(n)
+            except Exception:
+                return HttpResponse("SyntaxError")
+            user = request.user.profile
+            order = user.ordermodel_set.all().get(id=n)
+
+            if user.balance < order.price:
+                return HttpResponse("none")
+            one = new_order(order.num_serv, order.quantity, order.link)
+            if one["errorcode"] == "0":
+                order.number = int(one["order_id"])
+                order.num_serv = int(one["order_service_id"])
+                us = user.balance
+                pr = order.price
+                user.balance = us - pr
+                user.save()
+            elif one["errorcode"] == "-10":
+                return HttpResponse("none")
+            order.status = "ОБРАБАТЫВАЕТСЯ"
+            order.data = datetime.datetime.now()
+            order.order = True
+            order.save()
+            return HttpResponse("none")
 
 
 class OrderView(TemplateView):
@@ -475,8 +442,8 @@ class CabinetView(TemplateView):
         except Exception:
             link = "None"
         user = request.user.profile
-        baskets = user.orders_set.all().filter(order=False)
-        orders = user.orders_set.all().filter(order=True)
+        baskets = user.ordermodel_set.all().filter(order=False)
+        orders = user.ordermodel_set.all().filter(order=True)
         return render(
             request,
             self.template_name,
@@ -670,26 +637,6 @@ class ServicesView(TemplateView):
         return render(request, self.template_name, context)
 
 
-class NewsView(TemplateView):
-    template_name = "app/news.html"
-
-    def dispatch(self, request, *args, **kwargs):
-        news = NewsModel.objects.all()
-        page = request.GET.get("page", 1)
-        paginator = Paginator(news, 3)
-        try:
-            blog_list = paginator.page(page)
-        except PageNotAnInteger:
-            blog_list = paginator.page(1)
-        except EmptyPage:
-            blog_list = paginator.page(paginator.num_pages)
-        return render(
-            request,
-            self.template_name,
-            {"blog_list": blog_list, "request": request},
-        )
-
-
 class FriendView(TemplateView):
     template_name = "app/friend.html"
 
@@ -791,7 +738,7 @@ class NewOrderView(TemplateView):
                 qty = request.POST["qty"]
                 price = round(float(request.POST["sum"]), 1)
                 user = request.user.profile
-                Orders.objects.create(
+                OrderModel.objects.create(
                     social_network=soc_net,
                     name_service=cheat,
                     quantity=qty,
@@ -807,45 +754,6 @@ class NewOrderView(TemplateView):
                 return HttpResponse("error")
 
 
-class PricesView(TemplateView):
-    def dispatch(self, request, *args, **kwargs):
-        if request.is_ajax():
-
-            return JsonResponse({"success": 0.9})
-
-
-class NewwOrderView(TemplateView):
-    def dispatch(self, request, n, *args, **kwargs):
-        if request.method == "GET":
-
-            if not request.user.is_authenticated:
-                return HttpResponse("403 Forbidden")
-            try:
-                n = int(n)
-            except Exception:
-                return HttpResponse("SyntaxError")
-            user = request.user.profile
-            order = user.orders_set.all().get(id=n)
-
-            if user.balance < order.price:
-                return HttpResponse("none")
-            one = new_order(order.num_serv, order.quantity, order.link)
-            if one["errorcode"] == "0":
-                order.number = int(one["order_id"])
-                order.num_serv = int(one["order_service_id"])
-                us = user.balance
-                pr = order.price
-                user.balance = us - pr
-                user.save()
-            elif one["errorcode"] == "-10":
-                return HttpResponse("none")
-            order.status = "ОБРАБАТЫВАЕТСЯ"
-            order.data = datetime.datetime.now()
-            order.order = True
-            order.save()
-            return HttpResponse("none")
-
-
 class DeleteBasket(TemplateView):
     def get(self, request, n, *args, **kwargs):
         if request.method == "GET":
@@ -857,6 +765,6 @@ class DeleteBasket(TemplateView):
             except Exception:
                 return HttpResponse("SyntaxError")
             user = request.user.profile
-            order = user.orders_set.all().get(id=n)
+            order = user.ordermodel_set.all().get(id=n)
             order.delete()
             return HttpResponse("none")
