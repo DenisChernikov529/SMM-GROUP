@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "authentication",
     "balance",
     "news",
+    "main",
 ]
 
 MIDDLEWARE = [

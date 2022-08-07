@@ -2,10 +2,8 @@ from django.urls import path, include
 from .views import *
 
 urlpatterns = [
-    path('', IndexView.as_view(), name='index'),
     path('cabinet/', CabinetView.as_view(), name='cabinet'),
     path('order', OrderView.as_view(), name='order'),
-    path('services', ServicesView.as_view(), name='services'),
     path('friend', FriendView.as_view(), name='friend'),
     path('soc/', include('social_django.urls', namespace='social')),
     path('neworder', NewOrderView.as_view(), name='neworder'),

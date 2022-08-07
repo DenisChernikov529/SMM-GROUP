@@ -14,9 +14,3 @@ class OrdersForm(forms.ModelForm):
         self.fields["social_network"].widget.attrs.update(
             {"class": "new-order__row bl__main bl", },
         )
-
-
-class ContactForm(forms.ModelForm):
-    class Meta:
-        model = Message
-        fields = ["UserName", "email", "message"]

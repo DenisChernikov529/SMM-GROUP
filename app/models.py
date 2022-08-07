@@ -64,12 +64,6 @@ class PricesForServices(models.Model):
         verbose_name_plural = 'цены за услуги'
 
 
-class Message(models.Model):
-    UserName = models.CharField(max_length=100)
-    email = models.EmailField()
-    message = models.TextField()
-
-
 class Service(models.Model):
     name = models.CharField(max_length=2000)
     price = models.FloatField()
@@ -83,8 +77,3 @@ class Service(models.Model):
 
     def __str__(self):
         return f'{self.name} {self.social_network}'
-
-
-class Quest_Answer(models.Model):
-    question = models.CharField(max_length=55)
-    answer = models.TextField()

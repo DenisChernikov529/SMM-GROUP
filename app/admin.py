@@ -1,7 +1,10 @@
 from django.contrib import admin
-from .models import *
+
+# locale imports
+from .models import OrderModel
+from .models import PricesForServices
+from .models import Service
 
 admin.site.register(PricesForServices)
 admin.site.register(OrderModel)
-admin.site.register(Message)
 admin.site.register(Service)
