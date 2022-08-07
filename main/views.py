@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 from .forms import ContactForm
 from .models import FAQModel
 
-from app.models import Service
+from cabinet.models import Service
 
 from news.models import NewsModel
 

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "balance",
     "news",
     "main",
+    "cabinet",
 ]
 
 MIDDLEWARE = [
