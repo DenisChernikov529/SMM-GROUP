@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "n=tp%l9k=9=&2-j1=5v**2^svk%-ms6=2kizba$c@h(!)$!tb4"
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don"t run with debug turned on in production!
 DEBUG = True if config("DEBUG") == "True" else False
@@ -38,14 +38,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "app",
     "allauth",
     "social_django",
-    "authentication",
-    "balance",
-    "news",
-    "main",
-    "cabinet",
+    "apps.authentication",
+    "apps.balance",
+    "apps.news",
+    "apps.main",
+    "apps.cabinet",
 ]
 
 MIDDLEWARE = [
@@ -132,7 +131,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 LOGIN_REDIRECT_URL = "/"
@@ -141,3 +139,6 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 SITE_ID = 1
+
+# env
+BIGSMM_KEY = config("BIGSMM_KEY")
