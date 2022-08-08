@@ -3,7 +3,7 @@ import requests
 from typing import Union
 
 # locale imports
-from types.bigsmm import OrderResponse
+from schemas.bigsmm import OrderResponse
 
 base_url = "https://bigsmm.ru"
 
