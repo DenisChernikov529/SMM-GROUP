@@ -144,3 +144,5 @@ config.ini
 test.db
 dump.rdb
 push_commit.sh
+
+migrations/
