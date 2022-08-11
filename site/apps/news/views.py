@@ -9,7 +9,7 @@ from .models import NewsModel
 
 
 class NewsView(TemplateView):
-    template_name = "app/news.html"
+    template_name = "news.html"
 
     def dispatch(self, request, *args, **kwargs):
         news = NewsModel.objects.all()

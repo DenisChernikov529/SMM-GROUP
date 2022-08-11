@@ -1,0 +1,43 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+                {% block header %}
+                    <a href="/order" class="cab-menu2__item">Новый заказ</a>
+                    <a href="/cabinet" class="cab-menu2__item ">Мои заказы</a>
+                    <a href="/order" class="cab-menu2__item">Купить оптом</a>
+                    <a href="/friend" class="cab-menu2__item cab-menu2__item_active">Пригласи друга</a>
+                {% endblock %}
+{% block content %}
+<center><h1>Пригласи друга</h1></center>
+<div class="container">
+
+                <div style='width: 1000px;' class="table table-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="table-order-link" >Ваша реферальная ссылка:</td>
+                                <!-- <td class="table-order-link" ><a href="https://www.vk.com/home" id="refLink">https://www.vk.com/home </a></td> -->
+
+
+
+                                <td class="table-order-link">
+                                    {{link}}
+                                </td>
+
+
+
+
+
+
+
+                                <td class="table-order-quant"><button class="far fa-copy fa-2x" onclick="myFunction()"></button></td>
+                            </tr>
+                    </thead>
+
+                    </table>
+                </div>
+
+</div>
+
+
+{% endblock %}

@@ -25,7 +25,7 @@ Configuration.configure(
 
 
 class BalanceView(TemplateView):
-    template_name = "app/balance.html"
+    template_name = "balance.html"
 
     def dispatch(self, request, *args, **kwargs):
         if request.method == "POST":

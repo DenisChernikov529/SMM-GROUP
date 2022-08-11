@@ -6,14 +6,14 @@ from django.views.generic import TemplateView
 from .forms import ContactForm
 from .models import FAQModel
 
-from apps.cabinet.models import Service
+from apps.cabinet.models import ServiceModel
 from apps.news.models import NewsModel
 
 from services.mail import sendmessage0
 
 
 class IndexView(TemplateView):
-    template_name = "app/index.html"
+    template_name = "index.html"
 
     def dispatch(self, request, *args, **kwargs):
 
@@ -32,16 +32,16 @@ class IndexView(TemplateView):
             else:
                 return redirect("index")
         else:
-            fa = Service.objects.filter(social_network="fa")
+            fa = ServiceModel.objects.filter(social_network="fa")
             fapzh = fa.get(name="Подписчики живые").price
             try:
-                fa = Service.objects.filter(social_network="fa")
-                ins = Service.objects.filter(social_network="in")
-                yo = Service.objects.filter(social_network="yo")
-                te = Service.objects.filter(social_network="te")
-                tw = Service.objects.filter(social_network="tw")
-                ti = Service.objects.filter(social_network="ti")
-                vk = Service.objects.filter(social_network="vk")
+                fa = ServiceModel.objects.filter(social_network="fa")
+                ins = ServiceModel.objects.filter(social_network="in")
+                yo = ServiceModel.objects.filter(social_network="yo")
+                te = ServiceModel.objects.filter(social_network="te")
+                tw = ServiceModel.objects.filter(social_network="tw")
+                ti = ServiceModel.objects.filter(social_network="ti")
+                vk = ServiceModel.objects.filter(social_network="vk")
             except Exception:
                 pass
             try:
@@ -167,8 +167,6 @@ class IndexView(TemplateView):
             news = NewsModel.objects.all().reverse()[:3]
             form = ContactForm()
             questions = FAQModel.objects.all()
-            for i in questions:
-                print(i.question)
             context = {
                 "news": news,
                 "questions": questions,
@@ -209,19 +207,19 @@ class IndexView(TemplateView):
 
 
 class ServicesView(TemplateView):
-    template_name = "app/services.html"
+    template_name = "services.html"
 
     def dispatch(self, request, *args, **kwargs):
-        fa = Service.objects.filter(social_network="fa")
+        fa = ServiceModel.objects.filter(social_network="fa")
         fapzh = fa.get(name="Подписчики живые").price
         try:
-            fa = Service.objects.filter(social_network="fa")
-            ins = Service.objects.filter(social_network="in")
-            yo = Service.objects.filter(social_network="yo")
-            te = Service.objects.filter(social_network="te")
-            tw = Service.objects.filter(social_network="tw")
-            ti = Service.objects.filter(social_network="ti")
-            vk = Service.objects.filter(social_network="vk")
+            fa = ServiceModel.objects.filter(social_network="fa")
+            ins = ServiceModel.objects.filter(social_network="in")
+            yo = ServiceModel.objects.filter(social_network="yo")
+            te = ServiceModel.objects.filter(social_network="te")
+            tw = ServiceModel.objects.filter(social_network="tw")
+            ti = ServiceModel.objects.filter(social_network="ti")
+            vk = ServiceModel.objects.filter(social_network="vk")
         except Exception:
             pass
         try:
@@ -347,8 +345,6 @@ class ServicesView(TemplateView):
         news = NewsModel.objects.all().reverse()[:3]
         form = ContactForm()
         questions = FAQModel.objects.all()
-        for i in questions:
-            print(i.question)
         context = {
             "news": news,
             "questions": questions,

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+            <div class="registration-body">
+
+            <h2 class="title2">Новый пароль</h2>
+
+            <div class="forma-wrap">
+                <div class="forma" style="margin-top: -15px">
+                    <form action="#" method="post">
+                          {% csrf_token %}
+                          {% for field in form %}
+                            <div class="input-bl">
+                                <p class="input-bl__title">{{ field.label_tag }}</p>
+                                <div class="input-bl__field">
+                                    {{ field }}
+                                    <img src='#' alt="">
+                                </div>
+                            </div>
+                            {% endfor %}
+                        <div class="forma__foot forma__foot_2">
+                            <button class="btn6 forma__btn">Сменить пароль</button>
+                        </div>
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+{% endblock %}

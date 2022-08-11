@@ -30,43 +30,18 @@ class OrderModel(models.Model):
         verbose_name_plural = 'Заказы'
 
 
-SOC_NETWORKS = [
-    ('fa', 'Facebook'),
-    ('vk', 'Vkontakte'),
-    ('in', 'Instagram'),
-    ('yo', 'YouTube'),
-    ('tw', 'Twitch'),
-    ('ok', 'Ok'),
-]
-
-
-class PricesForServices(models.Model):
-    service_id = models.IntegerField()
-
-    social_network = models.CharField(
-        max_length=2,
-        choices=SOC_NETWORKS,
-    )
-
-    NAME_SERVS = [
-        ('na', 'Накрутка живых подписчиков'),
-        ('la', 'Лайки'),
-        ('pr', 'Просмотры'),
-    ]
-    name_service = models.CharField(max_length=2, choices=NAME_SERVS)
-    price = models.IntegerField()
-
-    def __str__(self):
-        return self. service_id
-
-    class Meta:
-        verbose_name = 'цена за услугу'
-        verbose_name_plural = 'цены за услуги'
-
-
-class Service(models.Model):
+class ServiceModel(models.Model):
     name = models.CharField(max_length=2000)
     price = models.FloatField()
+
+    SOC_NETWORKS = [
+        ('fa', 'Facebook'),
+        ('vk', 'Vkontakte'),
+        ('in', 'Instagram'),
+        ('yo', 'YouTube'),
+        ('tw', 'Twitch'),
+        ('ok', 'Ok'),
+    ]
     social_network = models.CharField(
         max_length=2,
         choices=SOC_NETWORKS,

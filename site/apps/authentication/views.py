@@ -18,7 +18,7 @@ from services import common
 
 
 class RefSignUpView(TemplateView):
-    template_name = "app/signup.html"
+    template_name = "signup.html"
 
     def dispatch(self, request, token, *args, **kwargs):
 
@@ -51,7 +51,7 @@ class RefSignUpView(TemplateView):
 
 
 class LoginView(TemplateView):
-    template_name = "app/login.html"
+    template_name = "login.html"
 
     def dispatch(self, request, *args, **kwargs):
         context = {}
@@ -76,7 +76,7 @@ class LoginView(TemplateView):
 
 
 class SignUpView(TemplateView):
-    template_name = "app/signup.html"
+    template_name = "signup.html"
 
     def dispatch(self, request, *args, **kwargs):
 
@@ -104,7 +104,7 @@ class SignUpView(TemplateView):
 
 
 class ForgotPassView(TemplateView):
-    template_name = "app/forgot-pass.html"
+    template_name = "forgot-pass.html"
 
     def dispatch(self, request, *args, **kwargs):
         if request.method == "POST":
@@ -146,7 +146,7 @@ class ForgotPassView(TemplateView):
 
 
 class SecretKeyView(TemplateView):
-    template_name = "app/changepass.html"
+    template_name = "changepass.html"
 
     def dispatch(self, request, key, *args, **kwargs):
         if request.method == "POST":

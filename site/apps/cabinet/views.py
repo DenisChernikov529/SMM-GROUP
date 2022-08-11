@@ -1,5 +1,6 @@
 import datetime
 
+from django.conf import settings
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import redirect
@@ -8,10 +9,9 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 
 # locale imports
-# from .forms import ContactForm
 from .forms import OrdersForm
 from .models import OrderModel
-from .models import Service
+from .models import ServiceModel
 
 from services.bigsmm import create_new_order
 
@@ -31,7 +31,12 @@ class NewwOrderView(TemplateView):
 
             if user.balance < order.price:
                 return HttpResponse("none")
-            one = create_new_order(order.num_serv, order.quantity, order.link)
+            one = create_new_order(
+                settings.BIGSMM_KEY,
+                order.num_serv,
+                order.quantity,
+                order.link,
+            )
             if one["errorcode"] == "0":
                 order.number = int(one["order_id"])
                 order.num_serv = int(one["order_service_id"])
@@ -49,23 +54,23 @@ class NewwOrderView(TemplateView):
 
 
 class OrderView(TemplateView):
-    template_name = "app/order.html"
+    template_name = "order.html"
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
             return redirect("login")
 
         if request.method == "GET":
-            fa = Service.objects.filter(social_network="fa")
+            fa = ServiceModel.objects.filter(social_network="fa")
             fapzh = fa.get(name="Подписчики живые").price
             try:
-                fa = Service.objects.filter(social_network="fa")
-                ins = Service.objects.filter(social_network="in")
-                yo = Service.objects.filter(social_network="yo")
-                te = Service.objects.filter(social_network="te")
-                tw = Service.objects.filter(social_network="tw")
-                ti = Service.objects.filter(social_network="ti")
-                vk = Service.objects.filter(social_network="vk")
+                fa = ServiceModel.objects.filter(social_network="fa")
+                ins = ServiceModel.objects.filter(social_network="in")
+                yo = ServiceModel.objects.filter(social_network="yo")
+                te = ServiceModel.objects.filter(social_network="te")
+                tw = ServiceModel.objects.filter(social_network="tw")
+                ti = ServiceModel.objects.filter(social_network="ti")
+                vk = ServiceModel.objects.filter(social_network="vk")
             except Exception:
                 pass
             try:
@@ -228,7 +233,7 @@ class OrderView(TemplateView):
 
 
 class CabinetView(TemplateView):
-    template_name = "app/cabinet.html"
+    template_name = "cabinet.html"
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
@@ -260,7 +265,7 @@ class CabinetView(TemplateView):
 
 
 class FriendView(TemplateView):
-    template_name = "app/friend.html"
+    template_name = "friend.html"
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
