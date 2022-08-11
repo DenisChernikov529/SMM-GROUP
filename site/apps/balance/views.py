@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -19,8 +20,8 @@ from apps.authentication.models import Profile
 
 
 Configuration.configure(
-    "718522",
-    "live_pYjehEQQvlwaHdWlpJsw_b9Vlq0La6qbbvWSnjXyAP8",
+    settings.YANDEX_ACCOUNT_ID,
+    settings.YANDEX_SECRET_KEY,
 )
 
 
