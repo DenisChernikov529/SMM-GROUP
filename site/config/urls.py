@@ -12,4 +12,5 @@ urlpatterns = [
     path("balance/", include("apps.balance.urls")),
     path("news/", include("apps.news.urls")),
     path("cabinet/", include("apps.cabinet.urls")),
+    path("api/", include("apps.api.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

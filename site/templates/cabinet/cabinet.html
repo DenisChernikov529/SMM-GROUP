@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Личный кабинет</title>
+{% endblock %}
+
+{% block my_orders %}
+  <a href="{% url 'cabinet' %}" class="cab-menu2__item cab-menu2__item_active">Мои заказы</a>
+{% endblock %}
+
+{% block content %}
+<div class="orders">
+  <div class="container">
+    <h1 class="caption2">Корзина</h1>
+    <div class="table table-orders">
+
+      <table>
+        <thead>
+          <tr style="margin: 0 auto;">
+            <td class="table-order-num"></td>
+            <td class="table-order-date">соц. сеть</td>
+            <td class="table-order-serv">услуга </td>
+            <td class="table-order-link">ссылка на заказ</td>
+
+            <td class="table-order-quant"> количество </td>
+            <td class="table-order-price"> стоимость </td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for basket in baskets %}
+            <tr id={{basket.id}}>
+              <td class="table-order-num" onclick="deletemodel({{basket.id}})">
+                <i class="far fa-times-circle fa-3x cross-button"></i>
+              </td>
+              <td class="table-order-date">
+                <p>{{basket.social_network}}</p>
+              </td>
+              <td class="table-order-serv">
+                <p>Накрутка</p>
+                <p>{{ basket.name_service}}</p>
+              </td>
+              <td class="table-order-link">
+                <a href>{{basket.link}}</a>
+              </td>
+              <td class="table-order-quant">{{basket.quantity}}</td>
+              <td class="table-order-price">{{basket.price}} руб</td>
+              <td class="table-order-qant" onclick='neworderb( {{basket.id}})'>   
+                <a href='#' class="btn2" >
+                  <span>Заказать</span>
+                </a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="caption2">Мои заказы</h1>
+    <div class="table table-orders">
+
+      <table>
+        <thead>
+          <tr>
+            <td class="table-order-num">№ заказа</td>
+            <td class="table-order-date"> Дата</td>
+            <td class="table-order-serv">услуга </td>
+            <td class="table-order-quant"> количество </td>
+            <td class="table-order-link">ссылка на заказ </td>
+            <td class="table-order-status">статус </td>
+            <td class="table-order-price"> стоимость </td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+            <tr>
+              <td class="table-order-num">#{{order.number}}</td>
+              <td class="table-order-date">=
+                <p>{{order.data.date}}</p>
+                <p>{{order.data.time}}</p>
+              </td>
+              <td class="table-order-serv">
+                <p>Накрутка</p>
+                <p>{{order.name_service}}</p>
+              </td>
+              <td class="table-order-quant">{{order.quantity}}</td>
+              <td class="table-order-link">
+                <a href="{{ order.link }}">{{ order.link }}</a>
+              </td>
+              <td class="table-order-status">{{ order.status }}</td>
+              <td class="table-order-price">{{order.price}} руб</td>
+            </tr>
+          {% endfor %}    
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<script>
+
+  function myFunction() {
+    var copyText = document.querySelector('.refLink');
+    copyText.copy();
+    document.execCommand("copy");
+  }
+</script>
+
+{% endblock %}

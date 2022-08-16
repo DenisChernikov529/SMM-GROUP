@@ -1,12 +1,11 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    {% block title %}
     <title>SMM-Group</title>
-    {% endblock %}
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <link rel="stylesheet" href='{% static "css/main.css" %}'>
     <link rel="stylesheet" href='{% static "css/order.css" %}'>
@@ -20,52 +19,12 @@
 
 <body>
 
-    <header class="header">
-        <div class="header-top">
-            <div class="container">
-                <a href="/" class="logo header-top__logo"><img src='{% static "img/logo.png" %}' alt=""></a>
+    <div class="page">
 
-                <nav class="menu">
-                    <a href="/" class="menu__item">Главная </a>
-                    <a href="/services" class="menu__item">Услуги и цены </a>
-                    <a href="news" class="menu__item">Новости</a>
-                    <a href="/#sect-faq" class="menu__item">FAQ </a>
+        {% block header %}
+            {% include 'components/header/auth_header.html' %}
+        {% endblock %}
 
-
-
-                    <button type="button" class="menu__close"><img src='{% static "img/close-btn.png" %}' alt=""></button>
-                </nav>
-                {% if request.user.is_authenticated %}
-                <div class="header-top2__btns">
-                    <a class="bnt1">
-                        <img src='{% static "img/user2.png" %}' alt="">
-
-                        <span><a href="/cabinet">{{ request.user.username }}</a></span>
-                    </a>
-
-                    <div class="info">
-                        <div class="info__icon"><img src='{% static "img/wallet.png" %}' alt=""></div>
-
-                        <span class="info__val"><a href="/balance">{{ request.user.profile.balance }} руб.</a></span>
-                    </div>
-                </div>
-                <a href="/balance" class="btn7 repl-balance">Пополнить баланс</a>
-                <button type="button" class="mob-menu-btn"><img src='{% static "img/burger.png" %}' alt=""></button>
-                {% else %}
-                <div class="header-top__account">
-                    <a href="{% url 'login' %}" class="bnt1">
-                        <img src= '{% static "img/log.png" %}' alt="">
-                        <span>Вход</span>
-                    </a>
-                    <a href="/accounts/signup/" class="btn2">
-                        <img src='{% static "img/reg.png" %}' alt="">
-                        <span>Регистрация</span>
-                    </a>
-                </div>
-                {% endif %}
-
-            </div>
-        </div>
         {% block content %}
         {% endblock %}
         <footer class="footer">
@@ -83,10 +42,9 @@
     <script src='{% static "js/home.js" %}'></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src='{% static "js/sign.js" %}'></script>
-    <script src='{% static "js/price2.js" %}'></script>
+    <script src='{% static "js/price.js" %}'></script>
     <script src='{% static "js/order.js" %}'></script>
     <script src='{% static "js/basket.js" %}'></script>
-
 </body>
 
 </html>

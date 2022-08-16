@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="enter">
+    <p class="enter__title">Войти через</p>
+    <div class="enter__list">
+        <a href="/soc/login/vk-oauth2" class="enter__item"><img src='{% static "img/vk3.png" %}' alt=""></a>
+        <a href='/{% url "social:begin" "facebook" %}'  class="enter__item"><img src='{% static "img/facebook2.png" %}' alt=""></a>
+        <a href="" class="enter__item"><img src='{% static "img/yandex.png" %}' alt=""></a>
+        <a href='{% url "social:begin" "google" %}' class="enter__item"><img src='{% static "img/google.png" %}' alt=""></a>
+    </div>
+</div>

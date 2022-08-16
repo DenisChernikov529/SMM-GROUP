@@ -18,7 +18,7 @@ from services import common
 
 
 class RefSignUpView(TemplateView):
-    template_name = "signup.html"
+    template_name = "authentication/signup.html"
 
     def dispatch(self, request, token, *args, **kwargs):
 
@@ -51,7 +51,7 @@ class RefSignUpView(TemplateView):
 
 
 class LoginView(TemplateView):
-    template_name = "login.html"
+    template_name = "authentication/login.html"
 
     def dispatch(self, request, *args, **kwargs):
         context = {}
@@ -76,7 +76,7 @@ class LoginView(TemplateView):
 
 
 class SignUpView(TemplateView):
-    template_name = "signup.html"
+    template_name = "authentication/signup.html"
 
     def dispatch(self, request, *args, **kwargs):
 

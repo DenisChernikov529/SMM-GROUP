@@ -2,10 +2,144 @@ import requests
 
 from typing import Union
 
-# locale imports
-from schemas.bigsmm import OrderResponse
+param = {
+    "key": "57d63d48c73c84a011e6fbd4bdd34f50",
+    "action": "order_details",
+    "order": "1534481",
+}
+url = "https://www.bigsmm.ru"
+api_url = "https://bigsmm.ru/api/v2/"
 
-base_url = "https://bigsmm.ru"
+
+def create_new_order(
+    key: str,
+    service_id: Union[str, int],
+    quantity: Union[str, int],
+    order_link: str,
+):
+    """Sends a request to create an order.
+
+    Parameters
+    ----------
+    key : str
+        API Access Key.
+    service_id : str, int
+        Service ID.
+    quantity : str, int
+        Number of subscribers.
+    order_link : str
+        Link to the page.
+
+    Raises
+    ------
+    ValueError
+        If one of the parameters does not match its type.
+
+    Returns
+    -------
+    OrderResponse
+        Received response.
+
+    """
+
+    r = requests.get(
+        api_url,
+        params={
+            "action": "add",
+            "key": key,
+            "service": service_id,
+            "quantity": quantity,
+            "link": order_link,
+        },
+    )
+    return r.json()
+
+
+def get_service(action):
+    parameters = {
+        "action": action
+    }
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def check_balance(action, key):
+    parameters = {
+        "action": action,
+        "key": key,
+    }
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def get_list_of_orders(key):
+    parameters = {
+        "action": "orders",
+        "key": key,
+    }
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def order_details(key, order):
+    parameters = {
+        "action": "order_details",
+        "key": key,
+        "order": order,
+    }
+
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def get_status_order(key, order):
+    parameters = {
+        "action": "status",
+        "key": key,
+        "order": order,
+    }
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def get_all_status_order(key, orders):
+    parameters = {
+        "action": "status",
+        "key": key,
+        "orders": orders
+    }
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def cancel_order(key, order):
+    parameters = {
+        "action": "cancel",
+        "key": key,
+        "order": order,
+    }
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def list_of_referrals(key):
+    parameters = {
+        "action": "referrals",
+        "key": key
+    }
+
+    r = requests.get(api_url, params=parameters)
+    return r.json()
+
+
+def referrals_total(key):
+    parameters = {
+        "action": "referrals_total",
+        "key": key,
+    }
+
+    r = requests.get(api_url, params=parameters)
+    return r.json()
 
 
 def get_balance(key: str) -> int:
@@ -40,56 +174,3 @@ def get_balance(key: str) -> int:
         }
     )
     return response.json()["balance"]
-
-
-def create_new_order(
-    key: str,
-    service_id: Union[str, int],
-    quantity: Union[str, int],
-    order_link: str,
-) -> OrderResponse:
-    """Sends a request to create an order.
-
-    Parameters
-    ----------
-    key : str
-        API Access Key.
-    service_id : str, int
-        Service ID.
-    quantity : str, int
-        Number of subscribers.
-    order_link : str
-        Link to the page.
-
-    Raises
-    ------
-    ValueError
-        If one of the parameters does not match its type.
-
-    Returns
-    -------
-    OrderResponse
-        Received response.
-
-    """
-    if order_link.startswith("https://"):
-        order_link = order_link[8:]
-    elif order_link.startswith("http://"):
-        order_link = order_link[7:]
-
-    response = requests.get(
-        f"{base_url}/api/",
-        params={
-            "method": "add_order",
-            "api_key": key,
-            "add_order": service_id,
-            "quantity": quantity,
-            "order_link": order_link,
-        }
-    )
-
-    return OrderResponse.parse_obj(response.json())
-
-
-if __name__ == "__main__":
-    print(get_balance(key))

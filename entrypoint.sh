@@ -1,1 +1,1 @@
-s
+python site/manage.py runserver

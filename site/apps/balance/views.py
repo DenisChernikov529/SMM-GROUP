@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -25,8 +26,8 @@ Configuration.configure(
 )
 
 
-class BalanceView(TemplateView):
-    template_name = "balance.html"
+class BalanceView(LoginRequiredMixin, TemplateView):
+    template_name = "balance/balance.html"
 
     def dispatch(self, request, *args, **kwargs):
         if request.method == "POST":

@@ -40,11 +40,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "allauth",
     "social_django",
+    "rest_framework",
+    # locale
     "apps.authentication",
     "apps.balance",
     "apps.news",
     "apps.main",
     "apps.cabinet",
+    "apps.api",
 ]
 
 MIDDLEWARE = [

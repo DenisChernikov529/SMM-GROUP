@@ -1,0 +1,44 @@
+{% load static %}
+
+<header class="header">
+</header>
+
+<div class="header-top2">
+    <div class="container">
+        <a href="/" class="logo"><img src='{% static "img/logo.png" %}' alt=""></a>
+        <nav class="cab-menu2 menu">
+            {% block header %}
+                {% block new_order %}
+                    <a href="{% url 'order' %}/som" class="cab-menu2__item">Новый заказ</a>
+                {% endblock %}
+                {% block my_orders %}
+                    <a href="{% url 'cabinet' %}" class="cab-menu2__item">Мои заказы</a>
+                {% endblock %}
+                {% block buy_wholesale %}
+                    <a href="{% url 'order' %}" class="cab-menu2__item">Купить оптом</a>
+                {% endblock %}
+                {% block friend %}
+                    <a href="{% url 'friend' %}" class="cab-menu2__item">Пригласи друга</a>
+                {% endblock %}
+            {% endblock %}
+            <button type="button" class="menu__close"><img src='{% static "img/close-btn.png" %}' alt=""></button>
+        </nav>
+
+        <div class="header-top2__btns">
+            <a class="bnt1">
+                <img src='{% static "img/user2.png" %}' alt="">
+
+                <span><a href="/cabinet">{{ request.user.username }}</a></span>
+            </a>
+
+            <div class="info">
+                <div class="info__icon"><img src='{% static "img/wallet.png" %}' alt=""></div>
+
+                <span class="info__val"><a href="/balance">{{ request.user.profile.balance }} руб.</a></span>
+            </div>
+        </div>
+        <a href="/balance" class="btn7 repl-balance">Пополнить баланс</a>
+        <button type="button" class="mob-menu-btn"><img src='{% static "img/burger.png" %}' alt=""></button>
+
+    </div>
+</div>

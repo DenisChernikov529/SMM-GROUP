@@ -30,21 +30,30 @@ class OrderModel(models.Model):
         verbose_name_plural = 'Заказы'
 
 
+class SocialNetworkModel(models.Model):
+    title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.title}"
+
+    class Meta:
+        verbose_name = "Социальная сеть"
+        verbose_name_plural = "Социальные сети"
+
+
 class ServiceModel(models.Model):
     name = models.CharField(max_length=2000)
     price = models.FloatField()
+    service_id = models.IntegerField(
+        null=True,
+        blank=True,
+    )
 
-    SOC_NETWORKS = [
-        ('fa', 'Facebook'),
-        ('vk', 'Vkontakte'),
-        ('in', 'Instagram'),
-        ('yo', 'YouTube'),
-        ('tw', 'Twitch'),
-        ('ok', 'Ok'),
-    ]
-    social_network = models.CharField(
-        max_length=2,
-        choices=SOC_NETWORKS,
+    social_network = models.ForeignKey(
+        SocialNetworkModel,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
     )
 
     class Meta:

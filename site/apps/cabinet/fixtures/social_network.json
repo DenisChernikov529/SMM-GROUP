@@ -1,0 +1,66 @@
+[
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 1,
+        "fields":
+        {
+            "title": "Facebook"
+        }
+    },
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 2,
+        "fields":
+        {
+            "title": "Vkontakte"
+        }
+    },
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 3,
+        "fields":
+        {
+            "title": "Instagram"
+        }
+    },
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 4,
+        "fields":
+        {
+            "title": "YouTube"
+        }
+    },
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 6,
+        "fields":
+        {
+            "title": "Ok"
+        }
+    },
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 7,
+        "fields":
+        {
+            "title": "TikTok"
+        }
+    },
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 8,
+        "fields":
+        {
+            "title": "Telegram"
+        }
+    },
+    {
+        "model": "cabinet.socialnetworkmodel",
+        "pk": 5,
+        "fields":
+        {
+            "title": "Twitter"
+        }
+    }
+]

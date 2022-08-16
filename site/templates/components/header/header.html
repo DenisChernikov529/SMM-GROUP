@@ -1,0 +1,49 @@
+{% load static %}
+
+<header class="header">
+    <div class="header-top2">
+        <div class="container">
+            <a href="/" class="logo header-top__logo"><img src='{% static "img/logo.png" %}' alt=""></a>
+
+            <nav class="menu">
+                <a href="/" class="menu__item">Главная </a>
+                <a href="/services" class="menu__item">Услуги и цены </a>
+                <a href="news" class="menu__item">Новости</a>
+                <a href="/#sect-faq" class="menu__item">FAQ </a>
+
+
+
+                <button type="button" class="menu__close"><img src='{% static "img/close-btn.png" %}' alt=""></button>
+            </nav>
+            {% if request.user.is_authenticated %}
+            <div class="header-top2__btns">
+                <a class="bnt1">
+                    <img src='{% static "img/user2.png" %}' alt="">
+
+                    <span><a href="/cabinet">{{ request.user.username }}</a></span>
+                </a>
+
+                <div class="info">
+                    <div class="info__icon"><img src='{% static "img/wallet.png" %}' alt=""></div>
+
+                    <span class="info__val"><a href="/balance">{{ request.user.profile.balance }} руб.</a></span>
+                </div>
+            </div>
+            <a href="/balance" class="btn7 repl-balance">Пополнить баланс</a>
+            <button type="button" class="mob-menu-btn"><img src='{% static "img/burger.png" %}' alt=""></button>
+            {% else %}
+            <div class="header-top__account">
+                <a href="{% url 'login' %}" class="bnt1">
+                    <img src= '{% static "img/log.png" %}' alt="">
+                    <span>Вход</span>
+                </a>
+                <a href="/accounts/signup/" class="btn2">
+                    <img src='{% static "img/reg.png" %}' alt="">
+                    <span>Регистрация</span>
+                </a>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</header>
