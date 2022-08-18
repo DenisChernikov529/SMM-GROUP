@@ -8,9 +8,12 @@ Deprecated==1.2.13
 distro==1.7.0
 Django==3.2.14
 django-allauth==0.51.0
+django-braces==1.15.0
+django-cors-headers==3.13.0
 django-rest-framework==0.1.0
 djangorestframework==3.13.1
 idna==3.3
+loguru==0.6.0
 oauthlib==3.2.0
 psycopg2-binary==2.9.3
 pycparser==2.21
@@ -30,4 +33,3 @@ urllib3==1.26.11
 uuid==1.30
 wrapt==1.14.1
 yandex-checkout==1.6.5
-gunicorn

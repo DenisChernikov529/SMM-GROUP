@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header %}
+    {% include 'components/header/header.html' %}
+{% endblock %}
+
 {% block title %}
   <title>Авторизация</title>
 {% endblock %}
 
-{%block content%}
+{% block content %}
 <div class="registration-body">
   <h2 class="title2">Вход</h2>
   <div class="forma-wrap">

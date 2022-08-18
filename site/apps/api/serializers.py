@@ -1,10 +1,11 @@
 from rest_framework import serializers
 
 # locale imports
-from apps.cabinet.models import ServiceModel
+from apps.cabinet.models import SocialNetworkModel
 
 
-class ServiceSerializer(serializers.ModelSerializer):
+class SocialNetworkSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ServiceModel
-        exclude = ["id"]
+        model = SocialNetworkModel
+        fields = ["title", "servicemodel_set"]
+        depth = 1

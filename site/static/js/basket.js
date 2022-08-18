@@ -1,18 +1,26 @@
-function neworderb(n){
+async function neworder(n){
 
-  var x = new XMLHttpRequest();
-  x.open("GET", "/newworder/" + n, true);
-  x.onload = function (){
-  }
-  x.send(null);
+  async function createOrder(n) {
+    return $.post(
+      "/api/create-order/",
+      {
+        "id": n,
+      }
+    )
+  };
+  await createOrder(n)
   setTimeout(() => { location.reload(); }, 500);
 };
-function deletemodel(n){
+async function deletemodel(n){
 
-  var x = new XMLHttpRequest();
-  x.open("GET", "/deleteorder/" + n, true);
-  x.onload = function (){
-  }
-  x.send(null);
+  async function delOrder(n) {
+    return $.post(
+      "/api/reduce-basket/",
+      {
+        "id": n,
+      }
+    )
+  };
+  await delOrder(n)
   setTimeout(() => { location.reload(); }, 500);
 };

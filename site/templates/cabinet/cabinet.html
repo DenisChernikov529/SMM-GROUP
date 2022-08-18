@@ -45,7 +45,7 @@
               </td>
               <td class="table-order-quant">{{basket.quantity}}</td>
               <td class="table-order-price">{{basket.price}} руб</td>
-              <td class="table-order-qant" onclick='neworderb( {{basket.id}})'>   
+              <td class="table-order-qant" onclick='neworder({{basket.id}})'>   
                 <a href='#' class="btn2" >
                   <span>Заказать</span>
                 </a>
@@ -77,8 +77,8 @@
           {% for order in orders %}
             <tr>
               <td class="table-order-num">#{{order.number}}</td>
-              <td class="table-order-date">=
-                <p>{{order.data.date}}</p>
+              <td class="table-order-date">
+                <p>{{order.date.date}}</p>
                 <p>{{order.data.time}}</p>
               </td>
               <td class="table-order-serv">
