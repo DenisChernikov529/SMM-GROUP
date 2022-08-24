@@ -4,6 +4,6 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic --noinput
 
-python manage.py loaddata faq superuser social_network service discount
+python manage.py loaddata social_network service discount superuser
 
 gunicorn config.wsgi -b 0.0.0.0:8080

@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"is",
+				"is_order"
+			],
+			[
+				"order",
+				"order_model"
+			],
+			[
+				"cs",
+				"CsrfExemptMixin"
+			],
+			[
+				"quan",
+				"quantity"
+			],
+			[
+				"qun",
+				"quantity"
+			],
+			[
+				"socia",
+				"social_network"
+			],
+			[
+				"dis",
+				"discount"
+			],
+			[
+				"qu",
+				"quantity"
+			],
+			[
+				"ordr",
+				"order_by"
+			],
+			[
+				"soc",
+				"social_network"
+			],
+			[
+				"Servi",
+				"ServiceModel"
+			],
+			[
+				"social",
+				"social_network"
+			],
+			[
+				"get",
+				"getPrice"
+			],
+			[
+				"soci",
+				"social_network"
+			],
+			[
 				"Socia",
 				"SocialNetworkModel"
 			],
@@ -88,24 +144,12 @@
 				"user_data"
 			],
 			[
-				"get",
-				"get_page_links"
-			],
-			[
 				"con",
 				"continue"
 			],
 			[
-				"socia",
-				"social_links"
-			],
-			[
 				"profil",
 				"profile_socials"
-			],
-			[
-				"soci",
-				"socials"
 			],
 			[
 				"get_or_crea",
@@ -232,10 +276,6 @@
 				"message_text"
 			],
 			[
-				"dis",
-				"dispatcher.add_router(menu_router)"
-			],
-			[
 				"getExce",
 				"getExcelFile}"
 			],
@@ -278,10 +318,6 @@
 			[
 				"templ",
 				"template_path"
-			],
-			[
-				"is",
-				"isinstance"
 			],
 			[
 				"no",
@@ -478,42 +514,6 @@
 			[
 				"insert",
 				"insert_total_row"
-			],
-			[
-				"add_tota",
-				"add_total_type"
-			],
-			[
-				"ce",
-				"cells"
-			],
-			[
-				"mate",
-				"materialData: materialData,"
-			],
-			[
-				"reque",
-				"request.method == 'POST':"
-			],
-			[
-				"Rea",
-				"React.MouseEvent"
-			],
-			[
-				"onClick",
-				"onClickHandler"
-			],
-			[
-				"city",
-				"city_mapper"
-			],
-			[
-				"obj",
-				"object.object.message.from_id,"
-			],
-			[
-				"event",
-				"EventTypeFilter"
 			]
 		]
 	},
@@ -551,6 +551,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"pretty",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"reinde",
 				"Indentation: Reindent Lines"
@@ -694,42 +710,59 @@
 		"/Users/kirill9366/Documents/SMM-GROUP/site",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/config",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/config/core",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/services",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/static",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/static/js",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/templates"
+		"/Users/kirill9366/Documents/SMM-GROUP/site/templates",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/authentication"
 	],
 	"file_history":
 	[
-		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/models.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/static/js/order.js",
-		"/Users/kirill9366/Documents/SMM-GROUP/smm-group.sublime-project",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/urls.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/static/js/price.js",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/main/index.html",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/config/settings.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/__init__.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/admin.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/services/common.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/views.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/cabinet/cabinet.html",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/static/js/basket.js",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/api/urls.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/api/views.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/components/header/header.html",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/config/core/__init__.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/config/core/auth.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/config/core/__init__,py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/authentication/signup.html",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/models.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/static/js/order.js",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/authentication/login.html",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/entrypoint.sh",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/forms.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/api/utils.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/config/settings.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/fixtures/discount.json",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/components/header/auth_header.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/api/serializers.py",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/fixtures/service.json",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/fixtures/social_network.json",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/authentication/fixtures/superuser.json",
+		"/Users/kirill9366/Documents/SMM-GROUP/smm-group.sublime-project",
+		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/__init__.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/config/urls.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/api/apps.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/main/views.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/static/css/main.css",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/components/header/auth_header.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/main/services.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/news/news.html",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/components/header/header.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/base.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/balance/balance.html",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/cabinet/cabinet.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/cabinet/friend.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/cabinet/order.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/base2.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/balance/views.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/news/views.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/views.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/authentication/login.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/authentication/changepass.html",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/authentication/signup.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/authentication/views.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/authentication/soc_auth.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/services/bigsmm.py",
@@ -748,18 +781,14 @@
 		"/Users/kirill9366/Documents/SMM-GROUP/.gitignore",
 		"/Users/kirill9366/Documents/SMM-GROUP/docker/nginx/nginx.conf",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/Dockerfile",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/entrypoint.sh",
 		"/Users/kirill9366/Documents/SMM-GROUP/docker-compose.yml",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/requirements.txt",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/.env",
 		"/Users/kirill9366/Documents/SMM-GROUP/docker/nginx/Dockerfile",
 		"/Users/kirill9366/Documents/SMM-GROUP/.env.template",
 		"/Users/kirill9366/Documents/SMM-GROUP/.env",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/admin.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/some_help.txt",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/fixtures/service.json",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/balance/urls.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/cabinet/urls.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/apps/main/fixtures/faq.json",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/signup.html",
 		"/Users/kirill9366/Documents/SMM-GROUP/site/templates/services.html",
@@ -817,17 +846,7 @@
 		"/Users/kirill9366/Documents/SMM-GROUP/authentication/urls.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/news/views.py",
 		"/Users/kirill9366/Documents/SMM-GROUP/news/admin.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/app/apps.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/news/urls.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/news/models.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/app/apibigsmm.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/balance/views.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/balance/urls.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/authentication/models.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/balance/forms.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/authentication/admin.py",
-		"/Users/kirill9366/Documents/SMM-GROUP/app/templates/app/base2.html",
-		"/Users/kirill9366/Documents/SMM-GROUP/app/templates/app/base.html"
+		"/Users/kirill9366/Documents/SMM-GROUP/app/apps.py"
 	],
 	"find":
 	{
@@ -845,6 +864,45 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/account",
+			"twSubPrice",
+			"twRetPosta",
+			"просмотры канала",
+			"ttVideoViewsPrice",
+			"twViewsPrice",
+			"igSavePrice",
+			"igHistViewsPrice",
+			"igAutoLikesPrice",
+			"igLiveSubPrice",
+			"ytLiveSubPrice",
+			"{\n",
+			"get_status_order",
+			"neworder",
+			"ReduceBasketAPIView",
+			"CsrfExemptMixin",
+			"insertCheats",
+			"cheats",
+			"var cheats",
+			"let cheats",
+			"cheats",
+			"order",
+			"OrdersForm",
+			"name_ser",
+			"create",
+			"ordr",
+			"TopUpBasketAPIView",
+			"PermissionDenie",
+			"'",
+			"setPrices",
+			"SocialNetworkModel",
+			"\"te\"",
+			"\"ti\"",
+			"\"ok\"",
+			"\"tw\"",
+			"\"yo\"",
+			"\"in\"",
+			"\"vk\"",
+			"\"fa\"",
 			" ",
 			"ServiceSerializer",
 			"cabianet",
@@ -863,6 +921,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"",
+			"8\"",
+			"8",
+			"7",
+			"5",
+			"4",
+			"3",
+			"2",
+			"1",
 			" ",
 			"base.html",
 			"template_name = \"main/",
@@ -894,7 +961,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"input":
 	{
@@ -920,7 +987,7 @@
 		"cols":
 		[
 			0.0,
-			0.468878505992,
+			0.517762891289,
 			1.0
 		],
 		"rows":

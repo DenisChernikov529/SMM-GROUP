@@ -1,19 +1,18 @@
 [
     {
-        "model": "auth.user",
+        "model": "authentication.customuser",
         "pk": 1,
         "fields":
         {
-            "password": "pbkdf2_sha256$260000$ALKiNxfzGJcJDkubiDDWOm$U/OywDXarhwQxiL7oF6IRv4GiNClBPfOI/nmHP+4+28=",
-            "last_login": "2022-08-16T14:30:04.127Z",
+            "password": "pbkdf2_sha256$260000$mX0t5IANtayYv42ygNVeE7$AQ4/YQysTKrrsJad+EXbaF+qSep9+lktaaUYcpetcDI=",
+            "last_login": "2022-08-24T22:53:44.338Z",
             "is_superuser": true,
-            "username": "root",
             "first_name": "",
             "last_name": "",
-            "email": "ro@gmail.com",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2022-08-16T12:59:30.005Z",
+            "date_joined": "2022-08-24T22:53:09.287Z",
+            "email": "admin@gmail.com",
             "groups":
             [],
             "user_permissions":

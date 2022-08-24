@@ -132,6 +132,8 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
 )
 
+AUTH_USER_MODEL = 'authentication.CustomUser'
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -166,3 +168,5 @@ SITE_ID = 1
 BIGSMM_KEY = config("BIGSMM_KEY")
 YANDEX_ACCOUNT_ID = config("YANDEX_ACCOUNT_ID")
 YANDEX_SECRET_KEY = config("YANDEX_SECRET_KEY")
+EMAIL_LOGIN = config("EMAIL_LOGIN")
+EMAIL_PASSWORD = config("EMAIL_PASSWORD")

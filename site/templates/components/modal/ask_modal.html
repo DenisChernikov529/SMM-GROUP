@@ -1,0 +1,42 @@
+{% load static %}
+
+<div class="wrap-modal wrap-modal-ask">
+    <div class="modal2">
+        <button class="modal__close">
+            <img src='{% static "img/close.png" %}' alt="">
+        </button>
+
+        <p class="modal2__title">
+            Задать вопрос
+        </p>
+        <form action="/" method="POST">
+            {% csrf_token %}
+            <div class="input-bl">
+                <p class="input-bl__title">UserName</p>
+                <div class="input-bl__field">
+                    <input name="username" type="text">
+                    <img src='{% static "img/user.png" %}' alt="">
+                </div>
+            </div>
+
+            <div class="input-bl">
+                <p class="input-bl__title">E mail</p>
+                <div class="input-bl__field">
+                    <input name="email" type="email">
+                    <img src='{% static "img/mail.png" %}' alt="">
+                </div>
+            </div>
+            <div class="input-bl">
+                <p class="input-bl__title">Ваш вопрос</p>
+                <div class="input-bl__field">
+                    <textarea name="message"></textarea>
+
+                </div>
+            </div>
+
+            <div class="forma__foot">
+                <button class="btn6 forma__btn">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>

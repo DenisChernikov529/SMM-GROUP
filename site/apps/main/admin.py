@@ -1,8 +1,12 @@
 from django.contrib import admin
 
 # locale imports
-from .models import FAQModel
 from .models import Message
+from .models import OwnerEmail
 
-admin.site.register(FAQModel)
 admin.site.register(Message)
+
+
+@admin.register(OwnerEmail)
+class OwnelEmailAdmin(admin.ModelAdmin):
+    list_display = ["email"]

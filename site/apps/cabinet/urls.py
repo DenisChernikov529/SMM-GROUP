@@ -10,5 +10,4 @@ urlpatterns = [
     path("", CabinetView.as_view(), name="cabinet"),
     path("order/", OrderView.as_view(), name="order"),
     path("friend/", FriendView.as_view(), name="friend"),
-    path("soc/", include("social_django.urls", namespace="social")),
 ]

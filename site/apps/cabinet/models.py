@@ -28,6 +28,7 @@ class ServiceModel(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
+        related_name="services",
     )
 
     class Meta:

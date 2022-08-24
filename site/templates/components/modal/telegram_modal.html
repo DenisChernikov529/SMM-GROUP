@@ -1,0 +1,37 @@
+{% load static %}
+
+<div class="wrap-modal" data-name="telegram">
+    <div class="modal">
+        <button class="modal__close">
+            <img src='{% static "img/close.png" %}' alt="">
+        </button>
+        <div class="modal__title">
+            <span> Раскрутка Telegram</span>
+            <img src='{% static "img/tg2.png" %}' alt="">
+        </div>
+
+        <div class="modal__body">
+            <div class="serv-list">
+                <input type="radio" name="serv" id="input-serv-tg-1">
+                <label for="input-serv-tg-1" class="serv">подписчики на канал</label>
+                <input type="radio" name="serv" id="input-serv-tg-3">
+                <label for="input-serv-tg-3" class="serv">просмотры</label>
+            </div>
+
+            <div class="mess">
+                <div class="mess__icon"><img src='{% static "img/icon.png" %}' alt="">
+
+                </div>
+                <div class="mess__txt">
+                    Чем больший объем, тем больше скидка. Покупай много и с выгодой. А купленный объем распределяй
+                    в личном кабинете на неограниченное количество заказов.
+                </div>
+            </div>
+
+            <div class="serv-box-items"></div>
+            <div class="advant-list"></div>
+
+        </div>
+
+    </div>
+</div>
