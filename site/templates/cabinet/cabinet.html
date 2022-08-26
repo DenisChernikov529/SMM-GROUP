@@ -44,7 +44,7 @@
                 <a href>{{basket.link}}</a>
               </td>
               <td class="table-order-quant">{{basket.quantity}}</td>
-              <td class="table-order-price">{{basket.price}} руб</td>
+              <td class="table-order-price" id="price-{{ basket.id }}">{{basket.price|floatformat}} руб</td>
               <td class="table-order-qant" onclick='neworder({{basket.id}})'>   
                 <a href='#' class="btn2" >
                   <span>Заказать</span>

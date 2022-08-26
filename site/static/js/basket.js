@@ -1,6 +1,12 @@
 async function neworder(n){
 
   async function createOrder(n) {
+    let balance = parseFloat($(".info__val").find("a").text().replace(" руб.", ""));
+    let price = parseFloat($(`#price-${n}`).text());
+    if (price > balance ) {
+        alert("На вашем балансе не достаточно средств!")
+        return
+    }
     return $.post(
       "/api/create-order/",
       {
