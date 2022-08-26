@@ -13,8 +13,11 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-ok-2">
-                <label for="input-serv-ok-2" class="serv">подписчики живые</label>
+                {% for service in ok.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="ok" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
+
             </div>
 
             <div class="mess">

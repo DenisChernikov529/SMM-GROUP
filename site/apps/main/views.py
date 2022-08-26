@@ -36,7 +36,17 @@ class IndexView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         context["news"] = NewsModel.objects.all().reverse()[:3]
+        context["tg"] = SNM.objects.filter(title="Telegram").first()
+        context["tt"] = SNM.objects.filter(title="TikTok").first()
+        context["ok"] = SNM.objects.filter(title="Ok").first()
+        context["tw"] = SNM.objects.filter(title="Twitter").first()
+        context["yt"] = SNM.objects.filter(title="YouTube").first()
+        context["ig"] = SNM.objects.filter(title="Instagram").first()
+        context["vk"] = SNM.objects.filter(title="Vkontakte").first()
+        context["fb"] = SNM.objects.filter(title="Facebook").first()
+
         return context
 
 

@@ -1,7 +1,7 @@
 {% load static %}
 
 
-<div class="wrap-modal" data-name="tiktok">
+<div class="wrap-modal" data-name="tt">
     <div class="modal">
         <button class="modal__close">
             <img src='{% static "img/close.png" %}' alt="">
@@ -14,12 +14,11 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-tiktok-2">
-                <label for="input-serv-tiktok-2" class="serv">подписчики живые</label>
-                <input type="radio" name="serv" id="input-serv-tiktok-4">
-                <label for="input-serv-tiktok-4" class="serv">лайки живые </label>
-                <input type="radio" name="serv" id="input-serv-tiktok-6">
-                <label for="input-serv-tiktok-6" class="serv"> просмотры видео</label>
+                {% for service in tt.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="tt" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
+
             </div>
 
             <div class="mess">

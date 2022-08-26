@@ -70,7 +70,7 @@ class AdvantServiceModel(models.Model):
         ServiceModel,
         verbose_name="Услуга",
         on_delete=models.CASCADE,
-        related_name="advans",
+        related_name="advants",
     )
 
     def __str__(self):

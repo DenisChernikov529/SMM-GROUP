@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="wrap-modal" data-name="youtube">
+<div class="wrap-modal" data-name="yt">
     <div class="modal">
         <button class="modal__close">
             <img src='{% static "img/close.png" %}' alt="">
@@ -13,16 +13,10 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-youtube-2">
-                <label for="input-serv-youtube-2" class="serv">подписчики живые</label>
-                <input type="radio" name="serv" id="input-serv-youtube-4">
-                <label for="input-serv-youtube-4" class="serv">лайки живые</label>
-
-                <input type="radio" name="serv" id="input-serv-youtube-6">
-                <label for="input-serv-youtube-6" class="serv">просмотры живые</label>
-
-                <input type="radio" name="serv" id="input-serv-youtube-8">
-                <label for="input-serv-youtube-8" class="serv">дизлайки</label>
+                {% for service in yt.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="yt" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
             </div>
 
             <div class="mess">

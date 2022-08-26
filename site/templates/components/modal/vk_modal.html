@@ -13,22 +13,10 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-vk-1">
-                <label for="input-serv-vk-1" class="serv">подписчики обычные</label>
-                <input type="radio" name="serv" id="input-serv-vk-2">
-                <label for="input-serv-vk-2" class="serv">подписчики живые</label>
-                <input type="radio" name="serv" id="input-serv-vk-3">
-                <label for="input-serv-vk-3" class="serv">друзья в профиль</label>
-                <input type="radio" name="serv" id="input-serv-vk-4">
-                <label for="input-serv-vk-4" class="serv">лайки живые </label>
-                <input type="radio" name="serv" id="input-serv-vk-5">
-                <label for="input-serv-vk-5" class="serv">просмотры живые (глазик)</label>
-                <input type="radio" name="serv" id="input-serv-vk-6">
-                <label for="input-serv-vk-6" class="serv">репосты</label>
-                <input type="radio" name="serv" id="input-serv-vk-7">
-                <label for="input-serv-vk-7" class="serv">опросы</label>
-                <input type="radio" name="serv" id="input-serv-vk-8">
-                <label for="input-serv-vk-8" class="serv">просмотры видео</label>
+                {% for service in vk.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="vk" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
             </div>
 
             <div class="mess">

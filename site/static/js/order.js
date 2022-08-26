@@ -9,7 +9,7 @@ $(async function() {
       }
 
       data.forEach((item) => {
-          var myArr = [item.servicemodel_set.map((item) => {
+          var myArr = [item.services.map((item) => {
               return {
                   k: item.name,
                   price: item.price

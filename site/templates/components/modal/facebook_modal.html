@@ -13,8 +13,11 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-facebook-2">
-                <label for="input-serv-facebook-2" class="serv">подписчики живые</label>
+                {% for service in fb.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="fb" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
+
             </div>
 
 

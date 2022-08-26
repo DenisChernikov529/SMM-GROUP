@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="wrap-modal" data-name="instagram">
+<div class="wrap-modal" data-name="ig">
     <div class="modal">
         <button class="modal__close">
             <img src='{% static "img/close.png" %}' alt="">
@@ -13,22 +13,10 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-inst-1">
-                <label for="input-serv-inst-1" class="serv">подписчики обычные</label>
-                <input type="radio" name="serv" id="input-serv-inst-2">
-                <label for="input-serv-inst-2" class="serv">подписчики живые</label>
-                <input type="radio" name="serv" id="input-serv-inst-3">
-                <label for="input-serv-inst-3" class="serv">лайки обычные</label>
-                <input type="radio" name="serv" id="input-serv-inst-4">
-                <label for="input-serv-inst-4" class="serv">лайки живые </label>
-                <input type="radio" name="serv" id="input-serv-inst-5">
-                <label for="input-serv-inst-5" class="serv"> автолайки </label>
-                <input type="radio" name="serv" id="input-serv-inst-6">
-                <label for="input-serv-inst-6" class="serv"> просмотры видео ig tv</label>
-                <input type="radio" name="serv" id="input-serv-inst-7">
-                <label for="input-serv-inst-7" class="serv">просмотры историй (story)</label>
-                <input type="radio" name="serv" id="input-serv-inst-8">
-                <label for="input-serv-inst-8" class="serv">сохранение</label>
+                {% for service in ig.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="ig" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
             </div>
 
             <div class="mess">

@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="wrap-modal" data-name="twitch">
+<div class="wrap-modal" data-name="tw">
     <div class="modal">
         <button class="modal__close">
             <img src='{% static "img/close.png" %}' alt="">
@@ -13,10 +13,11 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-twitch-1">
-                <label for="input-serv-twitch-1" class="serv">подписчики обычные</label>
-                <input type="radio" name="serv" id="input-serv-twitch-2">
-                <label for="input-serv-twitch-2" class="serv">Ретвит твита ( поста )</label>
+                {% for service in tw.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="tw" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
+
             </div>
 
             <div class="mess">

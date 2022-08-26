@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="wrap-modal" data-name="telegram">
+<div class="wrap-modal" data-name="tg">
     <div class="modal">
         <button class="modal__close">
             <img src='{% static "img/close.png" %}' alt="">
@@ -12,10 +12,10 @@
 
         <div class="modal__body">
             <div class="serv-list">
-                <input type="radio" name="serv" id="input-serv-tg-1">
-                <label for="input-serv-tg-1" class="serv">подписчики на канал</label>
-                <input type="radio" name="serv" id="input-serv-tg-3">
-                <label for="input-serv-tg-3" class="serv">просмотры</label>
+                {% for service in tg.services.all %}
+                    <input type="radio" class="serv" id="{{ service.pk }}" name="serv" >
+                    <label for="{{ service.pk }}" data-name="tg" id="{{ service.pk }}" name="serv" class="serv">{{ service.name }}</label>
+                {% endfor %}
             </div>
 
             <div class="mess">
