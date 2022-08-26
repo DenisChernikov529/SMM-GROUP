@@ -1,0 +1,1028 @@
+[
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 1,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 1
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 2,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 1
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 3,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 1
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 4,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 1
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 5,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 22
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 6,
+        "fields":
+        {
+            "title": "Аккаунты среднего качества",
+            "service": 22
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 7,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 22
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 8,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 22
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 9,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 22
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 10,
+        "fields":
+        {
+            "title": "Запуск в течение 4 часов",
+            "service": 23
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 11,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 23
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 12,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 23
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 13,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 23
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 14,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 23
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 15,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 29
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 16,
+        "fields":
+        {
+            "title": "Скорость до 1000 в день",
+            "service": 29
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 17,
+        "fields":
+        {
+            "title": "Гарантия бессрочная",
+            "service": 29
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 18,
+        "fields":
+        {
+            "title": "Аватарки имеют 60% аккаунтов.",
+            "service": 29
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 19,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 29
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 20,
+        "fields":
+        {
+            "title": "Запуск в течение 2 часов",
+            "service": 24
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 21,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 24
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 22,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 24
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 23,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 24
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 24,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 24
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 25,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 25
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 26,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 25
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 27,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 25
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 28,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 25
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 29,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 25
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 30,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 26
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 31,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 26
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 32,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 26
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 33,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 26
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 34,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 26
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 35,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 28
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 36,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 28
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 37,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 28
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 38,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 28
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 39,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 28
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 40,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 6
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 41,
+        "fields":
+        {
+            "title": "Скорость до 5000 в сутки.",
+            "service": 6
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 42,
+        "fields":
+        {
+            "title": "Подписчики частично русские и с аватарками",
+            "service": 6
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 43,
+        "fields":
+        {
+            "title": "Гарантия бессрочная",
+            "service": 6
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 44,
+        "fields":
+        {
+            "title": "Можно заказывать повторно после выполнения.",
+            "service": 6
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 45,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 8
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 46,
+        "fields":
+        {
+            "title": "Аккаунты среднего качества",
+            "service": 8
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 47,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 8
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 48,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 8
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 49,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 8
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 50,
+        "fields":
+        {
+            "title": "Запуск в течение 2 часов",
+            "service": 9
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 51,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 9
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 52,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 9
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 53,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 9
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 54,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 9
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 55,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 11
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 56,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 11
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 57,
+        "fields":
+        {
+            "title": "Накрутка на IGTV видео в ленте",
+            "service": 11
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 58,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 11
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 59,
+        "fields":
+        {
+            "title": "Вместе с просмотрами идут показы и охват (для бизнес профилей)",
+            "service": 11
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 60,
+        "fields":
+        {
+            "title": "Запуск  в течение 2 часов",
+            "service": 3
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 61,
+        "fields":
+        {
+            "title": "Скорость до 1000 в сутки.",
+            "service": 3
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 62,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 3
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 63,
+        "fields":
+        {
+            "title": "Гарантия бессрочная",
+            "service": 3
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 64,
+        "fields":
+        {
+            "title": "Можно заказывать повторно после выполнения.",
+            "service": 3
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 65,
+        "fields":
+        {
+            "title": "Запуск  в течение 2 часов",
+            "service": 4
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 66,
+        "fields":
+        {
+            "title": "Скорость до 10000 в сутки.",
+            "service": 4
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 67,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 4
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 68,
+        "fields":
+        {
+            "title": "Гарантия бессрочная",
+            "service": 4
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 69,
+        "fields":
+        {
+            "title": "100% уникальный трафик",
+            "service": 4
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 70,
+        "fields":
+        {
+            "title": "Запуск  в течение 2 часов",
+            "service": 5
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 71,
+        "fields":
+        {
+            "title": "Скорость до 1000 в сутки.",
+            "service": 5
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 72,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 5
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 73,
+        "fields":
+        {
+            "title": "Гарантия бессрочная",
+            "service": 5
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 74,
+        "fields":
+        {
+            "title": "Можно заказывать повторно после выполнения.",
+            "service": 5
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 75,
+        "fields":
+        {
+            "title": "Запуск  в течение 3 часов",
+            "service": 31
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 76,
+        "fields":
+        {
+            "title": "Скорость от 2000 до 10000 в сутки",
+            "service": 31
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 77,
+        "fields":
+        {
+            "title": "Гарантия бессрочная",
+            "service": 31
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 78,
+        "fields":
+        {
+            "title": "Можно заказывать повторно после выполнения.",
+            "service": 31
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 79,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 32
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 80,
+        "fields":
+        {
+            "title": "Скорость 1000-5000 в сутки",
+            "service": 32
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 81,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 32
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 82,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 32
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 83,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 32
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 84,
+        "fields":
+        {
+            "title": "Запуск  в течение 2 часов",
+            "service": 33
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 85,
+        "fields":
+        {
+            "title": "Скорость до 1000 в сутки.",
+            "service": 33
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 86,
+        "fields":
+        {
+            "title": "Подписчики живые люди",
+            "service": 33
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 87,
+        "fields":
+        {
+            "title": "Гарантия бессрочная",
+            "service": 33
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 88,
+        "fields":
+        {
+            "title": "Можно заказывать повторно после выполнения.",
+            "service": 33
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 89,
+        "fields":
+        {
+            "title": "Запуск в течение 2 часов",
+            "service": 30
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 90,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 30
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 91,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 30
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 92,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 30
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 93,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 30
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 94,
+        "fields":
+        {
+            "title": "Запуск в течение 2 часов",
+            "service": 19
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 95,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 19
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 96,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 19
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 97,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 19
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 98,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 19
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 99,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 19
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 100,
+        "fields":
+        {
+            "title": "Запуск в течение 2 часов",
+            "service": 20
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 101,
+        "fields":
+        {
+            "title": "Живые люди",
+            "service": 20
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 102,
+        "fields":
+        {
+            "title": "Гарантия результата",
+            "service": 20
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 103,
+        "fields":
+        {
+            "title": "Без банов, без списаний",
+            "service": 20
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 104,
+        "fields":
+        {
+            "title": "Можно заказывать повторно",
+            "service": 20
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 105,
+        "fields":
+        {
+            "title": "Скорость до 5000 в сутки",
+            "service": 14
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 106,
+        "fields":
+        {
+            "title": "Накрутка выполняется с запасом",
+            "service": 14
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 107,
+        "fields":
+        {
+            "title": "Старт в течении 0-12 часов",
+            "service": 14
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 108,
+        "fields":
+        {
+            "title": "Принимаются только открытые ссылки на канал",
+            "service": 14
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 109,
+        "fields":
+        {
+            "title": "Скорость до 10000 в сутки",
+            "service": 15
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 110,
+        "fields":
+        {
+            "title": "Накрутка выполняется с запасом",
+            "service": 15
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 111,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 15
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 112,
+        "fields":
+        {
+            "title": "Запуск в течение 1 часа",
+            "service": 16
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 113,
+        "fields":
+        {
+            "title": "Cкорость до 10000 в сутки",
+            "service": 16
+        }
+    },
+    {
+        "model": "cabinet.advantservicemodel",
+        "pk": 114,
+        "fields":
+        {
+            "title": "Накрутка просмотров поста на канале",
+            "service": 16
+        }
+    }
+]

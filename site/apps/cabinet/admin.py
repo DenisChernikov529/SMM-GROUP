@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 # locale imports
+from .models import AdvantServiceModel
 from .models import DiscountServiceModel
 from .models import OrderModel
 from .models import ServiceModel
@@ -19,4 +20,10 @@ class ServiceAdmin(admin.ModelAdmin):
 @admin.register(DiscountServiceModel)
 class DiscountServiceAdmin(admin.ModelAdmin):
     list_display = ("service", "discount", "quantity")
+    list_filter = ("service", )
+
+
+@admin.register(AdvantServiceModel)
+class AdvantServiceAdmin(admin.ModelAdmin):
+    list_display = ("title", )
     list_filter = ("service", )

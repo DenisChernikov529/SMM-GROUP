@@ -2,9 +2,8 @@ from braces.views import CsrfExemptMixin
 
 import datetime
 
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import JsonResponse
 from django.conf import settings
+from django.http import JsonResponse
 
 from rest_framework import generics
 from rest_framework import views
@@ -12,6 +11,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.request import Request
 
 # locale imports
+from .serializers import ServiceSerializer
 from .serializers import SocialNetworkSerializer
 from .utils import get_price
 
@@ -47,8 +47,6 @@ class TopUpBasketAPIView(views.APIView):
     authentication_classes = [CsrfExemptSessionAuthentication]
 
     def post(self, request: Request):
-        print(type(request))
-        print(type(format))
         price = get_price(
             request.data["social_network"],
             request.data["service"],
@@ -113,3 +111,11 @@ class AddOrderAPIView(views.APIView):
         request.user.profile.save()
         order_model.save()
         return JsonResponse({"status": "success"})
+
+
+class RetrieveUpdateDestroyServiceAPIView(
+    generics.RetrieveUpdateDestroyAPIView,
+):
+    serializer_class = ServiceSerializer
+    queryset = ServiceModel.objects.all()
+    # permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]

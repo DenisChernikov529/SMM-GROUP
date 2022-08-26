@@ -1,85 +1,29 @@
 $(function() {
-  var fapzh = parseFloat($('#fapzh').text().replace(",", "."));//Подписчики живые
-  fapzh = 0.498;
-
-  var yolzh = parseFloat($('#yolzh').text().replace(",", "."));//Лайки живые
-  yolzh = 0.55;
-  var yoprzh = parseFloat($('#yoprzh').text().replace(",", "."));//Просмотры живые
-  yoprzh = 0.22;
-  var yodz = parseFloat($('#yodz').text().replace(",", "."));//Дизлайки
-  yodz = 0.55;
-
-  var inspob = parseFloat($('#inspob').text().replace(",", "."));//Подписчики обычные
-  inspob = 0.22;
-  var inslob = parseFloat($('#inslob').text().replace(",", "."));//Лайки обычные
-  inslob = 0.09;
-  var inslzh = parseFloat($('#inslzh').text().replace(",", "."));//Лайки живые
-  inslzh = 0.18;
-  var insprvi = parseFloat($('#insprvi').text().replace(",", "."));//Просмотры видео IG TV
-  insprvi = 0.019;
-
-  var tepnk = parseFloat($('#tepnk').text().replace(",", "."));//Подписчики на канал
-  tepnk = 0.198;
-  var tepvgich = parseFloat($('#tepvgich').text().replace(",", "."));//Подписчики в группы, чаты
-  tepvgich = 0.198;
-  var tepr = parseFloat($('#tepr').text().replace(",", "."));//Просмотры
-  tepr = 0.039;
-
-  var twpnk = parseFloat($('#twpnk').text().replace(",", "."));//Подписчики обычные
-  var twpnk = 0.29;
-  var twrep = parseFloat($('#twrep').text().replace(",", "."));//Ретвит твита (поста)
-  var twprep = 0.88;
-  var twltv = parseFloat($('#twltv').text().replace(",", "."));//Лайки на твии (пост)
-  var twprep = 0.55;
-
-
-  var tipzh = parseFloat($('#tipzh').text().replace(",", "."));//Подписчики живые
-  var tipzh = 0.55;
-  var tilzh = parseFloat($('#tilzh').text().replace(",", "."));//Лайки живые
-  var tilzh = 0.22; 
-
-  var vkpob = parseFloat($('#vkpob').text().replace(",", "."));//Подписчики обычные
-  vkpob = 0.22;
-  var vkpzh = parseFloat($('#vkpzh').text().replace(",", "."));//Подписчики живые
-  vkpzh = 0.695;
-  var vkdrvpr = parseFloat($('#vkdrvpr').text().replace(",", "."));//Друзья в профиль
-  vkdrvpr = 0.36;
-  var vklzh = parseFloat($('#vklzh').text().replace(",", "."));//Лайки живые
-  vklzh = 0.125;
-  var vkprzh = parseFloat($('#vkprzh').text().replace(",", "."));//Просмотры живые (глазик)
-  vkprzh = 0.039;
-  var vkre = parseFloat($('#vkre').text().replace(",", "."));//Репосты
-  vkre = 0.29;
-  var vkprvi = parseFloat($('#vkprvi').text().replace(",", "."));//Просмотры видео
-  vkprvi = 0.045;
-
-  var odpzh = parseFloat($('#odpzh').text().replace(",", "."));//Подписчики живые
-  odpzh = 0.55;
-
+  // facebook
   const fbLiveSubPrice = [
     {
       amount: 1000,
       title: 'подписчики обычные',
       discount: 0,
-      price: fapzh * 1000
+      price: 0.498 * 1000
     },
     {
       amount: 2000,
       title: 'подписчики обычные',
       discount: 5,
-      price: fapzh * 1000 * 0.95
+      price: 0.498 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'подписчики обычные',
       discount: 10,
-      price: fapzh * 1000 * 0.90
+      price: 0.498 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'подписчики обычные',
       discount: 15,
-      price: fapzh * 1000 * 0.85
+      price: 0.498 * 1000 * 0.85
     }
   ];
 
@@ -93,7 +37,6 @@ $(function() {
 
 
   // youtube
-
   const ytLiveSubAdvList = [
     'Запуск в течение 2 часов',
     'Скорость до 1000 в сутки',
@@ -108,25 +51,25 @@ $(function() {
       amount: 1000,
       title: 'лайки живые',
       discount: 0,
-      price: yolzh * 1000
+      price: 0.55 * 1000
     },
     {
       amount: 2000,
       title: 'лайки живые',
       discount: 5,
-      price: yolzh * 1000 * 0.95
+      price: 0.55 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'лайки живые',
       discount: 10,
-      price: yolzh * 1000 * 0.90
+      price: 0.55 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'лайки живые',
       discount: 15,
-      price: yolzh * 1000 * 0.85
+      price: 0.55 * 1000 * 0.85
     }
   ];
 
@@ -144,25 +87,25 @@ $(function() {
       amount: 1000,
       title: 'просмотры живые',
       discount: 0,
-      price: yoprzh * 1000
+      price: 0.22 * 1000
     },
     {
       amount: 2000,
       title: 'просмотры живые',
       discount: 5,
-      price: yoprzh * 1000 * 0.95
+      price: 0.22 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'просмотры живые',
       discount: 10,
-      price: yoprzh * 1000 * 0.90
+      price: 0.22 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'просмотры живые',
       discount: 15,
-      price: yoprzh * 1000 * 0.85
+      price: 0.22 * 1000 * 0.85
     }
   ];
 
@@ -180,19 +123,19 @@ $(function() {
       amount: 1000,
       title: 'дизлайки',
       discount: 0,
-      price: yodz * 1000
+      price: 0.55 * 1000
     },
     {
       amount: 2000,
       title: 'дизлайки',
       discount: 5,
-      price: yodz * 1000 * 0.95
+      price: 0.55 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'дизлайки',
       discount: 10,
-      price: yodz * 1000 * 0.90
+      price: 0.55 * 1000 * 0.90
     },
     {
       amount: 10000,
@@ -212,31 +155,30 @@ $(function() {
 
 
   // instagram
-
   const igSubPrice = [
     {
       amount: 1000,
       title: 'подписчики обычные',
       discount: 0,
-      price: inspob * 1000
+      price: 0.22 * 1000
     },
     {
       amount: 2000,
       title: 'подписчики обычные',
       discount: 5,
-      price: inspob * 1000 * 0.95
+      price: 0.22 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'подписчики обычные',
       discount: 10,
-      price: inspob * 1000 * 0.90
+      price: 0.22 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'подписчики обычные',
       discount: 15,
-      price: inspob * 1000 * 0.85
+      price: 0.22 * 1000 * 0.85
     }
   ];
 
@@ -248,39 +190,30 @@ $(function() {
      'Можно заказывать повторно после выполнения'
   ];
 
-  const igLiveSubAdvList = [
-     'Запуск в течение 2 часов',
-     'Скорость до 3000 в сутки',
-     'Подписчики живые люди',
-     //'Гарантия бессрочная',
-     'Можно заказывать повторно после выполнения'
-  ];
-
-
   const igLikesPrice = [
     {
       amount: 1000,
       title: 'лайки обычные',
       discount: 0,
-      price: inslob * 1000
+      price: 0.09 * 1000
     },
     {
       amount: 2000,
       title: 'лайки обычные',
       discount: 5,
-      price: inslob * 1000 * 0.95
+      price: 0.09 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'лайки обычные',
       discount: 10,
-      price: inslob * 1000 * 0.90
+      price: 0.09 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'лайки обычные',
       discount: 15,
-      price: inslob * 1000 * 0.85
+      price: 0.09 * 1000 * 0.85
     }
   ];
 
@@ -298,25 +231,25 @@ $(function() {
       amount: 1000,
       title: 'лайки живые',
       discount: 0,
-      price: inslzh * 1000
+      price: 0.18 * 1000
     },
     {
       amount: 2000,
       title: 'лайки живые',
       discount: 5,
-      price: inslzh * 1000 * 0.95
+      price: 0.18 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'лайки живые',
       discount: 10,
-      price: inslzh * 1000 * 0.90
+      price: 0.18 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'лайки живые',
       discount: 15,
-      price: inslzh * 1000 * 0.85
+      price: 0.18 * 1000 * 0.85
     }
   ];
 
@@ -328,40 +261,30 @@ $(function() {
      'Можно заказывать повторно'
   ];
 
-
-  const igAutoLikesAdvList = [
-     'Запуск в течение 1 часа',
-     'Скорость 1500-3000 в сутки',
-     //'Автоматические лайки на новые публикации',
-     'Активация авто-лайков в течении 4-х часов, затем можно выпускать новые посты',
-     'Минимальное количество лайков на новый пост 30, максимальное - 7000'
-  ];
-
-
   const igViewsIGTVPrice = [
     {
       amount: 1000,
       title: 'просмотры видео ig tv',
       discount: 0,
-      price: insprvi * 1000
+      price: 0.019 * 1000
     },
     {
       amount: 5000,
       title: 'просмотры видео ig tv',
       discount: 5,
-      price: insprvi * 1000 * 0.95
+      price: 0.019 * 1000 * 0.95
     },
     {
       amount: 10000,
       title: 'просмотры видео ig tv',
       discount: 10,
-      price: insprvi * 1000 * 0.90
+      price: 0.019 * 1000 * 0.90
     },
     {
       amount: 20000,
       title: 'просмотры видео ig tv',
       discount: 15,
-      price: insprvi * 1000 * 0.85
+      price: 0.019 * 1000 * 0.85
     }
   ];
 
@@ -373,22 +296,6 @@ $(function() {
     'Вместе с просмотрами идут показы и охват (для бизнес профилей)'
   ];
 
-
-  const igHistViewsAdvList = [
-    'Запуск в течение 1 часа',
-    'Живые люди',
-    'Плавная скорость выполнения',
-    //'Без банов, без списаний',
-    'Накрутка охвата и показов на публикацию с главной и "других"'
-  ];
-
-  const igSaveAdvList = [
-    'Старт в течении 5-30 минут, возможны задержки',
-    'Накрутка сохранений публикации (закладки)',
-    'Статистика сохранений отображается в бизнес-профилях'
-  ];
-
-
   // telegram
 
   const tgChannelSubPrice = [
@@ -396,25 +303,25 @@ $(function() {
       amount: 1000,
       title: 'подписчики на канал',
       discount: 0,
-      price: tepnk * 1000
+      price: 0.198 * 1000
     },
     {
       amount: 2000,
       title: 'подписчики на канал',
       discount: 5,
-      price: tepnk * 1000 * 0.95
+      price: 0.198 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'подписчики на канал',
       discount: 10,
-      price: tepnk * 1000 * 0.90
+      price: 0.198 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'подписчики на канал',
       discount: 15,
-      price: tepnk * 1000 * 0.85
+      price: 0.198 * 1000 * 0.85
     }
   ];
 
@@ -430,25 +337,25 @@ $(function() {
       amount: 1000,
       title: 'просмотры',
       discount: 0,
-      price: tepr * 1000
+      price: 0.039 * 1000
     },
     {
       amount: 5000,
       title: 'просмотры',
       discount: 5,
-      price: tepr * 1000 * 0.95
+      price: 0.039 * 1000 * 0.95
     },
     {
       amount: 10000,
       title: 'просмотры',
       discount: 10,
-      price: tepr * 1000 * 0.90
+      price: 0.039 * 1000 * 0.90
     },
     {
       amount: 20000,
       title: 'просмотры',
       discount: 15,
-      price: tepr * 1000 * 0.85
+      price: 0.039 * 1000 * 0.85
     }
   ];
 
@@ -459,60 +366,67 @@ $(function() {
     'Чтобы найти ссылку на пост нужно перейти в канал, возле нужного поста нажмите кнопку "поделиться" и затем внизу нажмите "скопировать ссылку" и вставьте её в поле'
   ];
 
+  const tgSubChatPrice = [
+    {
+      amount: 1000,
+      title: 'просмотры',
+      discount: 0,
+      price: 0.198 * 1000
+    },
+    {
+      amount: 5000,
+      title: 'просмотры',
+      discount: 5,
+      price: 0.198 * 1000 * 0.95
+    },
+    {
+      amount: 10000,
+      title: 'просмотры',
+      discount: 10,
+      price: 0.198 * 1000 * 0.90
+    },
+    {
+      amount: 20000,
+      title: 'просмотры',
+      discount: 15,
+      price: 0.198 * 1000 * 0.85
+    }
+  ];
 
-  // twitch
+  const tgSubAdvList = [
+    'Запуск в течение 1 часа',
+    'Cкорость до 10000 в сутки',
+    'Накрутка просмотров поста на канале',
+    'Чтобы найти ссылку на пост нужно перейти в канал, возле нужного поста нажмите кнопку "поделиться" и затем внизу нажмите "скопировать ссылку" и вставьте её в поле'
+  ];
+
+
+  // twitter
 
   const twSubPrice = [
     {
       amount: 1000,
-      title: 'подписчики на канал',
+      title: 'подписчики обычные',
       discount: 0,
-      price: twpnk * 1000
+      price: 0.29 * 1000
     },
     {
       amount: 2000,
-      title: 'подписчики на канал',
+      title: 'подписчики обычные',
       discount: 5,
-      price: twpnk * 1000 * 0.95
+      price: 0.29 * 1000 * 0.95
     },
     {
       amount: 5000,
-      title: 'подписчики на канал',
+      title: 'подписчики обычные',
       discount: 10,
-      price: twpnk * 1000 * 0.90
+      price: 0.29 * 1000 * 0.90
     },
     {
       amount: 10000,
-      title: 'подписчики на канал',
+      title: 'подписчики обычные',
       discount: 15,
-      price: twpnk * 1000 * 0.85
-    }
-  ];
-
-  const twRetPosta = [
-    {
-      amount: 1000,
-      title: 'подписчики на канал',
-      discount: 0,
-      price: twprep * 1000
-    },
-    {
-      amount: 2000,
-      title: 'подписчики на канал',
-      discount: 5,
-      price: twprep * 1000 * 0.95
-    },
-    {
-      amount: 5000,
-      title: 'подписчики на канал',
-      discount: 10,
-      price: twprep * 1000 * 0.90
-    },
-    {
-      amount: 10000,
-      title: 'подписчики на канал',
-      discount: 15,
-      price: twprep * 1000 * 0.85
+      price: 0.29 * 1000 * 0.85
     }
   ];
 
@@ -523,8 +437,69 @@ $(function() {
     'Можно заказывать повторно после выполнения'
   ];
 
+  const twRetPostaPrice = [
+    {
+      amount: 1000,
+      title: 'Ретвит твита (поста)',
+      discount: 0,
+      price: 0.88 * 1000
+    },
+    {
+      amount: 2000,
+      title: 'Ретвит твита (поста)',
+      discount: 5,
+      price: 0.88 * 1000 * 0.95
+    },
+    {
+      amount: 5000,
+      title: 'Ретвит твита (поста)',
+      discount: 10,
+      price: 0.88 * 1000 * 0.90
+    },
+    {
+      amount: 10000,
+      title: 'Ретвит твита (поста)',
+      discount: 15,
+      price: 0.88 * 1000 * 0.85
+    }
+  ];
 
-  const twViewsAdvList = [
+  const twRetPostaAdvList = [
+    'Запуск в течение 1 часа',
+    'Скорость 1000-5000 в сутки',
+    //'Гарантия результата',
+    'Без банов, без списаний',
+    'Можно заказывать повторно'
+  ];
+
+  const twLikePostaPrice = [
+    {
+      amount: 1000,
+      title: 'Ретвит твита (поста)',
+      discount: 0,
+      price: 0.55 * 1000
+    },
+    {
+      amount: 2000,
+      title: 'Ретвит твита (поста)',
+      discount: 5,
+      price: 0.55 * 1000 * 0.95
+    },
+    {
+      amount: 5000,
+      title: 'Ретвит твита (поста)',
+      discount: 10,
+      price: 0.55 * 1000 * 0.90
+    },
+    {
+      amount: 10000,
+      title: 'Ретвит твита (поста)',
+      discount: 15,
+      price: 0.55 * 1000 * 0.85
+    }
+  ];
+
+  const twLikePostaAdvList = [
     'Запуск в течение 1 часа',
     'Скорость 1000-5000 в сутки',
     //'Гарантия результата',
@@ -541,25 +516,25 @@ $(function() {
       amount: 1000,
       title: 'подписчики живые',
       discount: 0,
-      price: tipzh * 1000
+      price: 0.55 * 1000
     },
     {
       amount: 2000,
       title: 'подписчики живые',
       discount: 5,
-      price: tipzh * 1000 * 0.95
+      price: 0.55 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'подписчики живые',
       discount: 10,
-      price: tipzh * 1000 * 0.90
+      price: 0.55 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'подписчики живые',
       discount: 15,
-      price: tipzh * 1000 * 0.85
+      price: 0.55 * 1000 * 0.85
     }
   ];
 
@@ -577,25 +552,25 @@ $(function() {
       amount: 1000,
       title: 'лайки живые',
       discount: 0,
-      price: tilzh * 1000
+      price: 0.22 * 1000
     },
     {
       amount: 2000,
       title: 'лайки живые',
       discount: 5,
-      price: tilzh * 1000 * 0.95
+      price: 0.22 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'лайки живые',
       discount: 10,
-      price: tilzh * 1000 * 0.90
+      price: 0.22 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'лайки живые',
       discount: 15,
-      price: tilzh * 1000 * 0.85
+      price: 0.22 * 1000 * 0.85
     }
   ];
 
@@ -607,15 +582,6 @@ $(function() {
     'Можно заказывать повторно'
   ];
 
-  const ttVideoViewsAdvList = [
-    'Запуск в течение 1 часа',
-    'Живые люди',
-    //'Гарантия результата',
-    'Без банов, без списаний',
-    'Можно заказывать повторно'
-  ];
-
-
   // vk
 
   const vkSubPrice = [
@@ -623,25 +589,25 @@ $(function() {
       amount: 1000,
       title: 'подписчики обычные',
       discount: 0,
-      price: vkpob * 1000
+      price: 0.22 * 1000
     },
     {
       amount: 2000,
       title: 'подписчики обычные',
       discount: 5,
-      price: vkpob * 1000 * 0.95
+      price: 0.22 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'подписчики обычные',
       discount: 10,
-      price: vkpob * 1000 * 0.90
+      price: 0.22 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'подписчики обычные',
       discount: 15,
-      price: vkpob * 1000 * 0.85
+      price: 0.22 * 1000 * 0.85
     }
   ];
 
@@ -659,25 +625,25 @@ $(function() {
       amount: 1000,
       title: 'подписчики живые',
       discount: 0,
-      price: vkpzh * 1000
+      price: 0.695 * 1000
     },
     {
       amount: 2000,
       title: 'подписчики живые',
       discount: 5,
-      price: vkpzh * 1000 * 0.95
+      price: 0.695 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'подписчики живые',
       discount: 10,
-      price: vkpzh * 1000 * 0.90
+      price: 0.695 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'подписчики живые',
       discount: 15,
-      price: vkpzh * 1000 * 0.85
+      price: 0.695 * 1000 * 0.85
     }
   ];
 
@@ -695,25 +661,25 @@ $(function() {
       amount: 500,
       title: 'друзья в профиль',
       discount: 0,
-      price: vkdrvpr * 1000
+      price: 0.36 * 1000
     },
     {
       amount: 1000,
       title: 'друзья в профиль',
       discount: 5,
-      price: vkdrvpr * 1000 * 0.95
+      price: 0.36 * 1000 * 0.95
     },
     {
       amount: 2000,
       title: 'друзья в профиль',
       discount: 10,
-      price: vkdrvpr * 1000 * 0.90
+      price: 0.36 * 1000 * 0.90
     },
     {
       amount: 5000,
       title: 'друзья в профиль',
       discount: 15,
-      price: vkdrvpr * 1000 * 0.85
+      price: 0.36 * 1000 * 0.85
     }
   ];
 
@@ -731,25 +697,25 @@ $(function() {
       amount: 1000,
       title: 'лайки живые',
       discount: 0,
-      price: vklzh * 1000
+      price: 0.125 * 1000
     },
     {
       amount: 2000,
       title: 'лайки живые',
       discount: 5,
-      price: vklzh * 1000 * 0.95
+      price: 0.125 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'лайки живые',
       discount: 10,
-      price: vklzh * 1000 * 0.90
+      price: 0.125 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'лайки живые',
       discount: 15,
-      price: vklzh * 1000 * 0.85
+      price: 0.125 * 1000 * 0.85
     }
   ];
 
@@ -767,25 +733,25 @@ $(function() {
       amount: 1000,
       title: 'просмотры живые (глазик)',
       discount: 0,
-      price: vkprzh * 1000
+      price: 0.039 * 1000
     },
     {
       amount: 5000,
       title: 'просмотры живые (глазик)',
       discount: 5,
-      price: vkprzh * 1000 * 0.95
+      price: 0.039 * 1000 * 0.95
     },
     {
       amount: 10000,
       title: 'просмотры живые (глазик)',
       discount: 10,
-      price: vkprzh * 1000 * 0.90
+      price: 0.039 * 1000 * 0.90
     },
     {
       amount: 20000,
       title: 'просмотры живые (глазик)',
       discount: 15,
-      price: vkprzh * 1000 * 0.85
+      price: 0.039 * 1000 * 0.85
     }
   ];
 
@@ -803,25 +769,25 @@ $(function() {
       amount: 1000,
       title: 'репосты',
       discount: 0,
-      price: vkre * 1000
+      price: 0.29 * 1000
     },
     {
       amount: 2000,
       title: 'репосты',
       discount: 5,
-      price: vkre * 1000 * 0.95
+      price: 0.29 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'репосты',
       discount: 10,
-      price: vkre * 1000 * 0.90
+      price: 0.29 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'репосты',
       discount: 15,
-      price: vkre * 1000 * 0.85
+      price: 0.29 * 1000 * 0.85
     }
   ];
 
@@ -833,39 +799,30 @@ $(function() {
      'Можно заказывать повторно'
   ];
 
-  const vkOprAdvList = [
-     'Запуск в течение 1 часа',
-     'Живые люди',
-     //'Гарантия результата',
-     'Без банов, без списаний',
-     'Можно заказывать повторно'
-  ];
-
-
   const vkVideoViewsPrice = [
     {
       amount: 1000,
       title: 'просмотры видео',
       discount: 0,
-      price: vkprvi * 1000
+      price: 0.045 * 1000
     },
     {
       amount: 5000,
       title: 'просмотры видео',
       discount: 5,
-      price: vkprvi * 1000 * 0.95
+      price: 0.045 * 1000 * 0.95
     },
     {
       amount: 10000,
       title: 'просмотры видео',
       discount: 10,
-      price: vkprvi * 1000 * 0.90
+      price: 0.045 * 1000 * 0.90
     },
     {
       amount: 20000,
       title: 'просмотры видео',
       discount: 15,
-      price: vkprvi * 1000 * 0.85
+      price: 0.045 * 1000 * 0.85
     }
   ];
 
@@ -885,25 +842,25 @@ $(function() {
       amount: 1000,
       title: 'подписчики живые',
       discount: 0,
-      price: odpzh * 1000
+      price: 0.55 * 1000
     },
     {
       amount: 2000,
       title: 'подписчики живые',
       discount: 5,
-      price: odpzh * 1000 * 0.95
+      price: 0.55 * 1000 * 0.95
     },
     {
       amount: 5000,
       title: 'подписчики живые',
       discount: 10,
-      price: odpzh * 1000 * 0.90
+      price: 0.55 * 1000 * 0.90
     },
     {
       amount: 10000,
       title: 'подписчики живые',
       discount: 15,
-      price: odpzh * 1000 * 0.85
+      price: 0.55 * 1000 * 0.85
     }
   ];
 
@@ -1083,182 +1040,8 @@ $(function() {
       insertAdvList(fbLiveSubAdvList);
       $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
       $("#input-serv-facebook-2").prop("checked", true);
-    }
-
-    // twitch 
-    else if($(this).attr('id') === 'sc' && $(this).attr('data-targ') === 'twitch') {   
-      $('.serv-box').remove();
-      insertPrice(twSubPrice);
-      insertAdvList(twSubAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-twitch-1").prop("checked", true);
-    }
-
-    // tiktok
-    else if($(this).attr('id') === 'sl' && $(this).attr('data-targ') === 'tiktok') {   
-      $('.serv-box').remove();
-      insertPrice(ttLiveSubPrice);
-      insertAdvList(ttLiveSubAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-tiktok-2").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'll' && $(this).attr('data-targ') === 'tiktok') {   
-      $('.serv-box').remove();
-      insertPrice(ttLiveLikesPrice);
-      insertAdvList(ttLiveLikesAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-tiktok-4").prop("checked", true);
-    }
-
-    // youtube
-    else if($(this).attr('id') === 'sl' && $(this).attr('data-targ') === 'youtube') {   
-      $('.serv-box').remove();
-      $('.advant-list__col').remove();
-      insertPrice(ytLiveSubPrice);
-      insertAdvList(ytLiveSubAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-youtube-2").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'll' && $(this).attr('data-targ') === 'youtube') {   
-      $('.serv-box').remove();
-      $('.advant-list__col').remove();
-      insertPrice(ytLiveLikesPrice);
-      insertAdvList(ytLiveLikesAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-youtube-4").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'vl' && $(this).attr('data-targ') === 'youtube') {   
-      $('.serv-box').remove();
-      $('.advant-list__col').remove();
-      insertPrice(ytLiveViewsPrice);
-      insertAdvList(ytLiveViewsAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-youtube-6").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'd' && $(this).attr('data-targ') === 'youtube') {   
-      $('.serv-box').remove();
-      $('.advant-list__col').remove();
-      insertPrice(ytLiveDislikesPrice);
-      insertAdvList(ytLiveDislikesAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-youtube-8").prop("checked", true);
-    }
-
-    // telegram
-    else if($(this).attr('id') === 'sc' && $(this).attr('data-targ') === 'tg') {   
-      $('.serv-box').remove();
-      insertPrice(tgChannelSubPrice);
-      insertAdvList(tgChannelSubAdvList);
-      $(`.wrap-modal[data-name="${'telegram'}"]`).fadeIn();
-      $("#input-serv-tg-1").prop("checked", true);
-    }
-    // else if($(this).attr('id') === 'sg' && $(this).attr('data-targ') === 'tg') {   
-    //   $('.serv-box').remove();
-    //   insertPrice(tgGroupSubPrice);
-    //   insertAdvList(tgGroupSubAdvList);
-    //   $(`.wrap-modal[data-name="${'telegram'}"]`).fadeIn();
-    //   $("#input-serv-tg-2").prop("checked", true);
-    // }
-    else if($(this).attr('id') === 'v' && $(this).attr('data-targ') === 'tg') {   
-      $('.serv-box').remove();
-      insertPrice(tgViewsPrice);
-      insertAdvList(tgViewsAdvList);
-      $(`.wrap-modal[data-name="${'telegram'}"]`).fadeIn();
-      $("#input-serv-tg-3").prop("checked", true);
-    }
-
-
-    // vk
-    else if($(this).attr('id') === 'sc' && $(this).attr('data-targ') === 'vk') {   
-      $('.serv-box').remove();
-      insertPrice(vkSubPrice);
-      insertAdvList(vkSubAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-vk-1").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'sl' && $(this).attr('data-targ') === 'vk') {   
-      $('.serv-box').remove();
-      insertPrice(vkLiveSubPrice);
-      insertAdvList(vkLiveSubAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-vk-2").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'fp' && $(this).attr('data-targ') === 'vk') {   
-      $('.serv-box').remove();
-      insertPrice(vkFriendsPrice);
-      insertAdvList(vkFriendsAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-vk-3").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'll' && $(this).attr('data-targ') === 'vk') {   
-      $('.serv-box').remove();
-      insertPrice(vkLiveLikesPrice);
-      insertAdvList(vkLiveLikesAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-vk-4").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'vl' && $(this).attr('data-targ') === 'vk') {   
-      $('.serv-box').remove();
-      insertPrice(vkLiveViewsPrice);
-      insertAdvList(vkLiveViewsAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-vk-5").prop("checked", true);
-    }
-    else if($(this).attr('id') === 're' && $(this).attr('data-targ') === 'vk') {   
-      $('.serv-box').remove();
-      insertPrice(vkRepPrice);
-      insertAdvList(vkRepAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-vk-6").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'vv' && $(this).attr('data-targ') === 'vk') {   
-      $('.serv-box').remove();
-      insertPrice(vkVideoViewsPrice);
-      insertAdvList(vkVideoViewsAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-vk-8").prop("checked", true);
-    }
-
-
-    // instagram
-    else if($(this).attr('id') === 'sc' && $(this).attr('data-targ') === 'ig') {   
-      $('.serv-box').remove();
-      insertPrice(igSubPrice);
-      insertAdvList(igSubAdvList);
-      $(`.wrap-modal[data-name="${'instagram'}"]`).fadeIn();
-      $("#input-serv-inst-1").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'lc' && $(this).attr('data-targ') === 'ig') {   
-      $('.serv-box').remove();
-      insertPrice(igLikesPrice);
-      insertAdvList(igLikesAdvList);
-      $(`.wrap-modal[data-name="${'instagram'}"]`).fadeIn();
-      $("#input-serv-inst-3").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'll' && $(this).attr('data-targ') === 'ig') {   
-      $('.serv-box').remove();
-      insertPrice(igLiveLikesPrice);
-      insertAdvList(igLiveLikesAdvList);
-      $(`.wrap-modal[data-name="${'instagram'}"]`).fadeIn();
-      $("#input-serv-inst-4").prop("checked", true);
-    }
-    else if($(this).attr('id') === 'vv' && $(this).attr('data-targ') === 'ig') {   
-      $('.serv-box').remove();
-      insertPrice(igViewsIGTVPrice);
-      insertAdvList(igViewsIGTVAdvList);
-      $(`.wrap-modal[data-name="${'instagram'}"]`).fadeIn();
-      $("#input-serv-inst-6").prop("checked", true);
-    }
+    };
     
-
-    // ok
-    else if($(this).attr('id') === 'sl' && $(this).attr('data-targ') === 'ok') {   
-      $('.serv-box').remove();
-      insertPrice(okLiveSubPrice);
-      insertAdvList(okLiveSubAdvList);
-      $(`.wrap-modal[data-name="${targName}"]`).fadeIn();
-      $("#input-serv-ok-2").prop("checked", true);
-    }
 
   });
   

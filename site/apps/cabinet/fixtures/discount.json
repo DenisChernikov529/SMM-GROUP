@@ -718,5 +718,245 @@
             "discount": 15.0,
             "quantity": 20000
         }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 73,
+        "fields":
+        {
+            "service": 1,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 74,
+        "fields":
+        {
+            "service": 29,
+            "discount": 0.0,
+            "quantity": 500
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 75,
+        "fields":
+        {
+            "service": 24,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 76,
+        "fields":
+        {
+            "service": 25,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 77,
+        "fields":
+        {
+            "service": 26,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 78,
+        "fields":
+        {
+            "service": 28,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 79,
+        "fields":
+        {
+            "service": 23,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 80,
+        "fields":
+        {
+            "service": 22,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 81,
+        "fields":
+        {
+            "service": 8,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 82,
+        "fields":
+        {
+            "service": 9,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 83,
+        "fields":
+        {
+            "service": 11,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 84,
+        "fields":
+        {
+            "service": 6,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 85,
+        "fields":
+        {
+            "service": 4,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 86,
+        "fields":
+        {
+            "service": 3,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 87,
+        "fields":
+        {
+            "service": 5,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 88,
+        "fields":
+        {
+            "service": 31,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 89,
+        "fields":
+        {
+            "service": 33,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 90,
+        "fields":
+        {
+            "service": 32,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 91,
+        "fields":
+        {
+            "service": 30,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 92,
+        "fields":
+        {
+            "service": 20,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 93,
+        "fields":
+        {
+            "service": 19,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 94,
+        "fields":
+        {
+            "service": 16,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 95,
+        "fields":
+        {
+            "service": 15,
+            "discount": 0.0,
+            "quantity": 1000
+        }
+    },
+    {
+        "model": "cabinet.discountservicemodel",
+        "pk": 96,
+        "fields":
+        {
+            "service": 14,
+            "discount": 0.0,
+            "quantity": 1000
+        }
     }
 ]

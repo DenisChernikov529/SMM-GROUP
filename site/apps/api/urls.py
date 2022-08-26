@@ -4,6 +4,7 @@ from django.urls import path
 from .views import AddOrderAPIView
 from .views import CalcPriceAPIView
 from .views import ReduceBasketAPIView
+from .views import RetrieveUpdateDestroyServiceAPIView
 from .views import ServicesAPIView
 from .views import TopUpBasketAPIView
 
@@ -13,4 +14,5 @@ urlpatterns = [
     path("top-up-basket/", TopUpBasketAPIView.as_view()),
     path("reduce-basket/", ReduceBasketAPIView.as_view()),
     path("create-order/", AddOrderAPIView.as_view()),
+    path("service/<int:pk>/", RetrieveUpdateDestroyServiceAPIView.as_view()),
 ]

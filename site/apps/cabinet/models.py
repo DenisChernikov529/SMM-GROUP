@@ -43,6 +43,7 @@ class DiscountServiceModel(models.Model):
         ServiceModel,
         verbose_name="Услуга",
         on_delete=models.CASCADE,
+        related_name="discounts",
     )
     discount = models.FloatField(
         verbose_name="Скидка ( в процентах )",
@@ -57,6 +58,27 @@ class DiscountServiceModel(models.Model):
     class Meta:
         verbose_name = "Скидка"
         verbose_name_plural = "Скидки"
+        ordering = ["quantity"]
+
+
+class AdvantServiceModel(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название",
+    )
+    service = models.ForeignKey(
+        ServiceModel,
+        verbose_name="Услуга",
+        on_delete=models.CASCADE,
+        related_name="advans",
+    )
+
+    def __str__(self):
+        return f"{self.title} {self.service}"
+
+    class Meta:
+        verbose_name = "Описание услуги"
+        verbose_name_plural = "Описание услуг"
 
 
 class OrderModel(models.Model):
